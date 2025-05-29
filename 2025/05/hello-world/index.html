@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hello world</title>
+		<meta name="description" content="Personal blog of Chris Given, government technologist. These words are always written by a human; I have no one to blame but myself.">
+
+		<link rel="alternate" href="/blog/feeds/feed.xml" type="application/atom+xml" title="Chris Given">
+
+		<link rel="icon" type="image/png" href="/blog/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/svg+xml" href="/blog/favicon.svg">
+		<link rel="shortcut icon" href="/blog/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png">
+		<link rel="manifest" href="/blog/site.webmanifest">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+		
+		
+		
+		<style>/* Defaults */
+:root {
+	--font-family: "Source Sans 3", -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--base-color: #404040;
+	--subtle-color: #727272;
+	--decoration-color: #a6a6a6;
+	--highlight-color: #477e7d;
+
+	--background-color: #fff;
+
+	--text-color: var(--base-color);
+	--text-color-link: var(--highlight-color);
+	--text-color-link-active: var(--highlight-color);
+	--text-color-link-visited: var(--highlight-color);
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--base-color: #fff;
+		--subtle-color: #c6c6c6;
+		--decoration-color: #777;
+		--highlight-color: #68c4c3;
+
+		--background-color: #333;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+	line-height: 1.5rem;
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 35em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 1.5rem 0;
+}
+
+h1+h2, h1+h3, h2+h3, h3+h4, h4+h5, h5+h6 {
+	margin-top: 0;
+}
+
+h1, h2, h3 {
+	margin-top: 3rem;
+}
+
+h1 {
+	font-size: 2rem;
+	line-height: 3rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+}
+
+h2 a[href], h3 a[href], h2 a[href]:hover, h3 a[href]:hover, h2 a[href]:visited, h3 a[href]:visited, h2 a[href]:active, h3 a[href]:active {
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+h3 a[href], h3 a[href]:hover, h3 a[href]:visited, h3 a[href]:active {
+	border-bottom-width: 0.5px;
+	border-bottom-style: solid;
+	border-bottom-color: var(--decoration-color);
+}
+
+h3 a[href]:hover, h3 a[href]:active {
+	border-bottom-color: var(--highlight-color);
+}
+
+a[href].permalink, a[href].permalink:visited, a[href].permalink:hover, a[href].permalink:active {
+	color: var(--decoration-color);
+	border-bottom: none;
+	font-weight: 300;
+}
+
+a[href].permalink:hover, a[href].permalink:active {
+	color: var(--highlight-color);
+}
+
+h1+.meta, h2+.meta {
+	margin-top: -1.5rem;
+	font-size: .875rem;
+	color: var(--subtle-color);
+}
+
+.meta time {
+	text-transform: uppercase;
+}
+
+h3, h4, h5, h6 {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+h3, h4 {
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 1rem;
+}
+
+h4 {
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+h5, h6 {
+	font-weight: 400;
+	font-size: .875rem;
+}
+
+blockquote {
+	margin: 1.5rem 0;
+	padding-left: 1rem;
+	border-left-width: 0.5px;
+	border-left-style: solid;
+	border-left-color: var(--decoration-color);
+}
+
+sup {
+	vertical-align: top;
+	position: relative;
+	top: -0.1875em;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+
+hr {
+    background: url('/img/flamingo.svg') no-repeat top center;
+    background-size: contain;
+    display: block;
+    height: 1.5rem;
+	margin: 1.5rem 0;
+    font-size: 0;
+    border: 0;
+    position: relative;
+}
+
+hr:before,
+hr:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: var(--decoration-color);
+    height: 0.5px;
+    top: 0.7rem;
+}
+
+hr:before {
+    left: 0;
+    right: 50%;
+    margin-right: 1.4rem;
+}
+
+hr:after {
+    right: 0;
+    left: 50%;
+    margin-left: 1.25rem;
+}
+
+main,
+footer {
+	padding: 1.5rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 0.5px solid var(--decoration-color);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+figure {
+	margin: 0;
+}
+
+figcaption {
+	font-style: italic;
+	font-weight: 600;
+	font-size: .875rem;
+	margin-top: 0;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 0.75em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.75em 1.5em;
+}
+.home-link {
+	position: relative;
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+.home-link .by-decorator {
+	position: absolute;
+	right: 100%;
+	padding-right: 0.25rem;
+	font-weight: 400;
+	font-style: italic;
+	color: var(--subtle-color);
+}
+
+.home-link .name {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-size: .875rem;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	color: var(--subtle-color);
+}
+
+.postsgroup {
+	margin-bottom: 4.5rem;
+}
+
+.post {
+	margin-bottom: 3rem;
+}
+
+.footnotes-sep {
+	margin: 1.5rem 0;
+    height: 0.5px;
+    color: var(--decoration-color);
+    background: var(--decoration-color);
+}
+
+.footnotes {
+	margin: 1.5rem 0;
+}
+
+.footnote-item {
+	margin: 0.75rem 0;
+}</style>
+	</head>
+	
+	<!-- Google tag (gtag.js) -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K1MMQX1NDK"></script>
+	
+
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/blog/" class="home-link"><span class="by-decorator">by </span><span class="name">Chris Given</span></a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/blog/">Home</a></li>
+					<li class="nav-item"><a href="/blog/about/">About</a></li>
+					<li class="nav-item"><a href="/blog/archive/">Archive</a></li>
+					<li class="nav-item"><a href="/blog/connect/">Connect</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<h1 id="hello-world">Hello world</h1>
+<div class="meta">
+	<time datetime="2025-05-29">Thursday, May 29, 2025</time>
+</div>
+
+<p>I made a thing. Apologies for the walls being pretty bare, I only just moved in.</p>
+<p>I have an <a href="/blog/feeds/feed.xml">RSS feed</a> if you’d like to know when I post something. No promises.</p>
+
+
+		</main>
+
+		<!-- This page `/2025/05/hello-world/` was built on 2025-05-29T14:21:08.764Z -->
+		<script type="module" src="/blog/dist/KEzg0QUzmD.js"></script>
+	</body>
+</html>
