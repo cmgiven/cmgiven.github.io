@@ -1,0 +1,10 @@
+---
+eleventyNavigation:
+  key: Archive
+  order: 3
+---
+
+<h1>Archive</h1>
+
+{% set monthslist = collections.postsByMonth %}
+{% include "monthslist.njk" %}

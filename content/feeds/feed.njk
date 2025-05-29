@@ -1,0 +1,8 @@
+---
+  permalink: /feeds/feed.xml
+  subtitle: All posts
+  layout: layouts/atom.njk
+  eleventyExcludeFromCollections: true
+---
+{% set postslist = collections.posts | reverse | head(20) %}
+{% include "rsspostslist.njk" %}

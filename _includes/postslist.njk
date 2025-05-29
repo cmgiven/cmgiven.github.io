@@ -1,8 +1,43 @@
-<ol reversed class="postlist" style="--postlist-index: {{ (postslistCounter or postslist.length) + 1 }}">
-{%- for post in postslist | reverse %}
-	<li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-		<a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
-	</li>
+{%- for date in postslist | uniqueDates | reverse %}
+	{% set posts = postslist | selectDateEquals(date) %}
+	{% set essay = posts | getEssay %}
+	{% set otherPosts = posts | getShorts | reverse %}
+
+	{% if essay %}
+		<div class="postsgroup">
+		<h2><a href="{{essay.url}}">{{ essay.data.title }}</a></h2>
+		<div class="meta">
+			<time datetime="{{ essay.date | htmlDateString }}">{{ essay.date | readableDate("EEEE, LLLL d, yyyy") }}</time>
+		</div>
+		{{ essay.content | safe }}
+		</div>
+	{% endif %}
+
+	{% if otherPosts | length > 0 %}
+		<div class="postsgroup">
+		<h2>
+			<time datetime="{{ date }}">{{ date | dateFromISO | readableDate("LLLL d") }}</time>
+		</h2>
+
+		{%- for post in otherPosts %}
+			<div class="post">
+			{%- if post.data.link %}
+			<h3>
+				<a href="{{ post.data.link }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.data.link }}</code>{% endif %}</a>
+				<a href="{{ post.url }}" class="permalink" title="Permalink{% if post.data.title %} to “{{ post.data.title }}”{% endif %}">#</a>
+			</h3>
+			{% else %}
+			<h3>
+				{%- if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
+				<a href="{{ post.url }}" class="permalink" title="Permalink{% if post.data.title %} to “{{ post.data.title }}”{% endif %}">#</a>
+			</h3>
+			{% endif %}
+			{{ post.content | safe }}
+			{%- if post.data.elsewhere %}
+			<p><a href="{{ post.link }}">Continue reading on {{ post.data.elsewhere }}&hellip;</a></p>
+			{% endif %}
+			</div>
+		{%- endfor %}
+		</div>
+	{% endif %}
 {%- endfor %}
-</ol>

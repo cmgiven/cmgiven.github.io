@@ -11,7 +11,42 @@ export default function(eleventyConfig) {
 		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat('yyyy-LL-dd');
 	});
 
-	// Get the first `n` elements of a collection.
+	eleventyConfig.addFilter("urlMonth", (dateObj) => {
+		return DateTime.fromJSDate(dateObj).toFormat('yyyy/MM');
+	});
+
+	eleventyConfig.addFilter("dateFromISO", (str) => {
+		return DateTime.fromISO(str, { zone: "utc" }).toJSDate();
+	});
+
+	eleventyConfig.addFilter("selectAttrEquals", (array, attr, test) => {
+		return array.filter((obj) => obj[attr] === test);
+	});
+
+	eleventyConfig.addFilter("isEssay", (tags) => {
+		return tags.includes("essays");
+	});
+
+	eleventyConfig.addFilter("getEssay", (array) => {
+		return array.find((post) => post.data.tags.includes("essays"));
+	});
+
+	eleventyConfig.addFilter("getEssays", (array) => {
+		return array.filter((post) => post.data.tags.includes("essays"));
+	});
+
+	eleventyConfig.addFilter("getShorts", (array) => {
+		return array.filter((post) => !post.data.tags.includes("essays"));
+	});
+
+	eleventyConfig.addFilter("uniqueDates", (array) => {
+        return [...new Set(array.map(post => post.date.toISOString().slice(0, 10)))];
+	});
+
+	eleventyConfig.addFilter("selectDateEquals", (array, date) => {
+		return array.filter((obj) => obj.date.toISOString().slice(0, 10) === date);
+	});
+
 	eleventyConfig.addFilter("head", (array, n) => {
 		if(!Array.isArray(array) || array.length === 0) {
 			return [];
@@ -23,21 +58,7 @@ export default function(eleventyConfig) {
 		return array.slice(0, n);
 	});
 
-	// Return the smallest number argument
 	eleventyConfig.addFilter("min", (...numbers) => {
 		return Math.min.apply(null, numbers);
 	});
-
-	// Return the keys used in an object
-	eleventyConfig.addFilter("getKeys", target => {
-		return Object.keys(target);
-	});
-
-	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "posts"].indexOf(tag) === -1);
-	});
-
-	eleventyConfig.addFilter("sortAlphabetically", strings =>
-		(strings || []).sort((b, a) => b.localeCompare(a))
-	);
 };
