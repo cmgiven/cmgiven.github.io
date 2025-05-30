@@ -4,10 +4,31 @@
   <subtitle type="text">All posts</subtitle>
   <link rel="alternate" type="text/html" href="https://chrisgiven.com/" />
   <link rel="self" type="application/atom+xml" href="https://chrisgiven.com/feeds/feed.xml" />
-  <updated>2025-05-29T00:00:00Z</updated>
+  <updated>2025-05-30T00:00:00Z</updated>
   <id>https://chrisgiven.com/feeds/feed.xml</id>
   
 
+  <entry>
+    <title type="text">Direct File on GitHub</title>
+    <link rel="alternate" type="text/html" href="https://github.com/IRS-Public/direct-file" />
+    <link rel="related" type="text/html" href="https://chrisgiven.com/2025/05/direct-file-on-github/" />
+    <published>2025-05-30T00:00:00Z</published>
+    <updated>2025-05-30T00:00:00Z</updated>
+    <id>https://chrisgiven.com/2025/05/direct-file-on-github/</id>
+    <author>
+      <name>Chris Given</name>
+      <uri>https://chrisgiven.com/about/</uri>
+    </author>
+    <content type="html">&lt;p&gt;The IRS has now published &lt;a href=&quot;https://github.com/IRS-Public/direct-file&quot;&gt;the vast majority of Direct File’s code on GitHub&lt;/a&gt; as open-source software. As a work of the U.S. government, Direct File is in the public domain. And now everyone can check it out.&lt;/p&gt;
+&lt;p&gt;Releasing Direct File’s source code demonstrates that the IRS is fulfilling its obligations under the &lt;a href=&quot;https://www.congress.gov/bill/118th-congress/house-bill/9566&quot;&gt;SHARE IT Act&lt;/a&gt; (three weeks ahead of schedule!). Now that Direct File has paved the way, I hope that more of the IRS’s code, paid for with taxpayer dollars, will soon be available to all of us.&lt;/p&gt;
+&lt;p&gt;Open sourcing Direct File has long been planned, and even longer desired. Explaining last May why open source is particularly important for Direct File, &lt;a href=&quot;https://www.irs.gov/pub/irs-pdf/p5969.pdf&quot;&gt;the team wrote&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The IRS could take further steps to build public trust and enable independent assessment of its work. The Direct File product team was given the mandate to develop software that ensures every taxpayer receives the full benefit of any tax provisions for which they are eligible. Releasing components of Direct File as open-source software would enable the team to demonstrate this commitment.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Establishing trust with taxpayers was core to our approach for designing and building Direct File. By creating the most accurate option for filing, by making taxes accessible to all, by keeping taxpayer data secure, and now, by publicly sharing Direct File’s code, the Direct File team showed our dedication to earning taxpayers’ trust.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Please note: As of two weeks ago, I no longer work at the IRS. I am writing solely in my personal capacity.&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title type="text">Hello world</title>
     <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/05/hello-world/" />
