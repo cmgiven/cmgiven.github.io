@@ -5,11 +5,9 @@
     {%- if post.data.description %}
     <summary type="text">{{ post.data.description }}</summary>
     {%- endif %}
-    {%- if post.data.link %}
-    <link rel="alternate" type="text/html" href="{{ post.data.link }}" />
-    <link rel="related" type="text/html" href="{{ absolutePostUrl }}" />
-    {%- else %}
     <link rel="alternate" type="text/html" href="{{ absolutePostUrl }}" />
+    {%- if post.data.link %}
+    <link rel="related" type="text/html" href="{{ post.data.link }}" />
     {%- endif %}
     <published>{{ post.date | dateToRfc3339 }}</published>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
