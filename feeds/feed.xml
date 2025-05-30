@@ -2,24 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title type="text">Chris Given</title>
   <subtitle type="text">All posts</subtitle>
-  <link rel="alternate" type="text/html" href="https://chrisgiven.com/blog/" />
-  <link rel="self" type="application/atom+xml" href="https://chrisgiven.com/blog/feeds/feed.xml" />
+  <link rel="alternate" type="text/html" href="https://chrisgiven.com/" />
+  <link rel="self" type="application/atom+xml" href="https://chrisgiven.com/feeds/feed.xml" />
   <updated>2025-05-29T00:00:00Z</updated>
-  <id>https://chrisgiven.com/blog/feeds/feed.xml</id>
+  <id>https://chrisgiven.com/feeds/feed.xml</id>
   
 
   <entry>
     <title type="text">Hello world</title>
-    <link rel="alternate" type="text/html" href="https://chrisgiven.com/blog/2025/05/hello-world/" />
+    <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/05/hello-world/" />
     <published>2025-05-29T00:00:00Z</published>
     <updated>2025-05-29T00:00:00Z</updated>
-    <id>https://chrisgiven.com/blog/2025/05/hello-world/</id>
+    <id>https://chrisgiven.com/2025/05/hello-world/</id>
     <author>
       <name>Chris Given</name>
       <uri>https://chrisgiven.com/about/</uri>
     </author>
     <content type="html">&lt;p&gt;I made a thing. Apologies for the walls being pretty bare, I only just moved in.&lt;/p&gt;
-&lt;p&gt;I have an &lt;a href=&quot;https://chrisgiven.com/blog/feeds/feed.xml&quot;&gt;RSS feed&lt;/a&gt; if you’d like to know when I post something. No promises.&lt;/p&gt;
+&lt;p&gt;I have an &lt;a href=&quot;https://chrisgiven.com/feeds/feed.xml&quot;&gt;RSS feed&lt;/a&gt; if you’d like to know when I post something. No promises.&lt;/p&gt;
 </content>
   </entry>
 
