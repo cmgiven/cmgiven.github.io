@@ -4,10 +4,68 @@
   <subtitle type="text">All posts</subtitle>
   <link rel="alternate" type="text/html" href="https://chrisgiven.com/" />
   <link rel="self" type="application/atom+xml" href="https://chrisgiven.com/feeds/feed.xml" />
-  <updated>2025-05-30T00:00:00Z</updated>
+  <updated>2025-06-02T00:00:00Z</updated>
   <id>https://chrisgiven.com/feeds/feed.xml</id>
   
 
+  <entry>
+    <title type="text">Performance.gov: IRS Direct File</title>
+    <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/06/performance-gov-irs-direct-file/" />
+    <link rel="related" type="text/html" href="https://www.youtube.com/watch?v=3GDKEtm_sLM" />
+    <published>2025-06-02T00:00:00Z</published>
+    <updated>2025-06-02T00:00:00Z</updated>
+    <id>https://chrisgiven.com/2025/06/performance-gov-irs-direct-file/</id>
+    <author>
+      <name>Chris Given</name>
+      <uri>https://chrisgiven.com/about/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Speaking of Merici, I’ve been meaning to reupload this video from a July 2024 event, where she and I spoke about lessons learned from the Direct File pilot. The original was taken down in January 2025 due to the transition.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3GDKEtm_sLM?si=Ies6tBMEuBMa0Wlf&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+</content>
+  </entry>
+  <entry>
+    <title type="text">ESP Launches Future of Tax Filing Fellowship</title>
+    <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/06/esp-launches-future-of-tax-filing-fellowship/" />
+    <link rel="related" type="text/html" href="https://economicsecurityproject.org/news/future-of-tax-filing-fellowship/" />
+    <published>2025-06-02T00:00:00Z</published>
+    <updated>2025-06-02T00:00:00Z</updated>
+    <id>https://chrisgiven.com/2025/06/esp-launches-future-of-tax-filing-fellowship/</id>
+    <author>
+      <name>Chris Given</name>
+      <uri>https://chrisgiven.com/about/</uri>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;Economic Security Project (ESP) announces a new fellowship focused on the future of tax filing, civic tech, and benefits equity. Launching in the wake of the Trump administration’s decision to sunset IRS Direct File—one of the most popular civic tech pilots in recent memory—this new initiative brings together technologists, policy experts, and equity-driven strategists to preserve hard-won progress and accelerate new ideas that make government work better for everyone.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In personal news, I’ve joined with our friends at the Economic Security Project to document and build upon the legacy of Direct File.&lt;/p&gt;
+&lt;p&gt;The Economic Security Project was one of the earliest and most effective advocates for Direct File, and throughout the program’s existence, they were a leader in getting the word out to the taxpayers who needed it the most. I’m grateful for this opportunity to continue collaborating with Gabriel, Jen, and Merici, reflecting on what we learned and what work remains unfinished.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title type="text">Peeking Behind the Code</title>
+    <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/06/peeking-behind-the-code/" />
+    <link rel="related" type="text/html" href="https://www.forbes.com/sites/andrewleahey/2025/05/30/peeking-behind-the-code-irs-just-open-sourced-direct-file/" />
+    <published>2025-06-02T00:00:00Z</published>
+    <updated>2025-06-02T00:00:00Z</updated>
+    <id>https://chrisgiven.com/2025/06/peeking-behind-the-code/</id>
+    <author>
+      <name>Chris Given</name>
+      <uri>https://chrisgiven.com/about/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Andrew Leahey, for Forbes:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It isn’t every day that the IRS drops something that reads like a blend of legal code, logic theory, and open government idealism. But that is exactly what it did, laying Direct File bare—and releasing it into the &lt;a href=&quot;https://github.com/IRS-Public/direct-file?tab=License-1-ov-file#readme&quot;&gt;public domain&lt;/a&gt;—for the world to scrutinize, fork, or admire in stunned silence.&lt;/p&gt;
+&lt;p&gt;At the heart of this code disclosure is something called the Fact Graph, a dry name for a tool that is quietly revolutionary: a logic engine that parses ambiguous tax scenarios and infers relationships while consistently applying tax rules.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The first line of code for Direct File, written February 8, 2022, was for an experiment to explore the concepts that would become the Fact Graph. Even from that first experiment, the work was motivated by the need to establish trust with taxpayers. Direct File can ask hundreds of questions about your tax situation, but most users will see only a small fraction of that. The Fact Graph provides us with a means of proving that none of the unasked questions would have changed the bottom line of your tax return and that you’re getting every tax benefit to which you’re entitled.&lt;/p&gt;
+&lt;p&gt;The IRS has been working for years to develop a relatively simpler model of taxes, its “Tax Calculator” effort, which would model the relationships between the lines of the various tax forms. But Direct File and its Fact Graph go further by also tackling the &lt;a href=&quot;https://en.wikipedia.org/wiki/Last_mile_(telecommunications)&quot;&gt;last mile&lt;/a&gt; problem of taxes, the often fuzzy relationship between what gets entered on tax forms and the assorted facts about your life that inform what you’re eligible to claim, a relationship that’s variously described via statutes, regulations, court decisions, instructions, publications, and other guidance. This wasn’t trivial, as our team would often be teeing up novel questions for the IRS Office of Chief Counsel to consider as we sought to bring that ambiguity into sharp focus.&lt;/p&gt;
+&lt;p&gt;There’s ample prior art of knowledge graphs for taxes, but for me personally, the lineage of my thinking traces to a conversation with &lt;a href=&quot;https://ben.klemens.org&quot;&gt;Ben Klemens&lt;/a&gt; at &lt;a href=&quot;https://medium.com/civic-tech-thoughts-from-joshdata/what-happened-at-open-data-day-dc-2016-26fdbf9e40c2&quot;&gt;Open Data Day 2016&lt;/a&gt;, discussing his &lt;a href=&quot;https://github.com/b-k/py1040&quot;&gt;python script for doing his own taxes&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This all matters in an age when public trust in institutions is frayed and when algorithms, or artificial intelligence (AI), increasingly mediates our rights and obligations. If the tax code is going to be enforced by machines, and the preparation calculated and handled by the same, the rules those machines follow should be legible and contestable. The open-sourcing of Direct File hints at a future where regulatory logic and automated decision-making isn’t hidden, but published like case law—reviewable, revisable, and maybe even improved by the very public it serves.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bingo.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title type="text">Direct File on GitHub</title>
     <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/05/direct-file-on-github/" />
