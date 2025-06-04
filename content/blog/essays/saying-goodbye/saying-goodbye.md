@@ -28,7 +28,7 @@ It was August 2022.
 
 It wasn't Direct File's first death. By my count it was the second, although there's an argument for it being the third. Neither count includes all of the doomed attempts to tilt at this particular windmill over the two and a half decades before we took up the lance.
 
-During the initial policy process[^1] on Direct File in 2021, I had argued that we would need to make a go/no go decision by June 2022 in order to have the best shot at success in filing season 2024, the final filing season of the Biden administration. And so when the policy process was reconstituted in early 2022, we were told to our goal would be to prepare options and recommendations for a June decision. But by May, it was clear that we were going to blow that deadline.
+During the initial policy process[^1] on Direct File in 2021, I had argued that we would need to make a go/no go decision by June 2022 in order to have the best shot at success in filing season 2024, the final filing season of the Biden administration. And so when the policy process was reconstituted in early 2022, we were told our goal would be to prepare options and recommendations for a June decision. But by May, it was clear that we were going to blow that deadline.
 
 So Merici Vinton, my U.S. Digital Service (USDS) project co-lead, and I hatched a plan. We asked to use our small USDS team to build a "proof of concept." This prototype[^2] of Direct File would illustrate some of the key issues being discussed in the policy process and develop an evidence base to inform future strategy. It would build momentum ahead of a decision, enabling us to hit the ground running if and when that decision came. I said the words "preserving optionality" a lot.
 
