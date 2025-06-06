@@ -4,10 +4,34 @@
   <subtitle type="text">All posts</subtitle>
   <link rel="alternate" type="text/html" href="https://chrisgiven.com/" />
   <link rel="self" type="application/atom+xml" href="https://chrisgiven.com/feeds/feed.xml" />
-  <updated>2025-06-04T00:00:00Z</updated>
+  <updated>2025-06-06T00:00:00Z</updated>
   <id>https://chrisgiven.com/feeds/feed.xml</id>
   
 
+  <entry>
+    <title type="text">The Who Cares Era</title>
+    <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/06/the-who-cares-era/" />
+    <link rel="related" type="text/html" href="https://dansinker.com/posts/2025-05-23-who-cares/" />
+    <published>2025-06-06T00:00:00Z</published>
+    <updated>2025-06-06T00:00:00Z</updated>
+    <id>https://chrisgiven.com/2025/06/the-who-cares-era/</id>
+    <author>
+      <name>Chris Given</name>
+      <uri>https://chrisgiven.com/about/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Dan Sinker:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the Who Cares Era, the most radical thing you can do is care.&lt;/p&gt;
+&lt;p&gt;In a moment where machines churn out mediocrity, make something yourself. Make it imperfect. Make it rough. Just make it.&lt;/p&gt;
+&lt;p&gt;At a time where the government’s uncaring boot is pressing down on all of our necks, the best way to fight back is to care. Care loudly. Tell others. Get going.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;At last week’s &lt;a href=&quot;https://summit.codeforamerica.org&quot;&gt;Code for America Summit&lt;/a&gt;, Suzanne Chapman and Katie Aloisi spoke about how Direct File was designed to build trust. Katie spent a significant portion of her time getting into the weeds of the tax situation of a fictional multi-generational household.&lt;/p&gt;
+&lt;p&gt;The audience wasn’t bored. They were &lt;em&gt;riveted&lt;/em&gt;. Suzanne and Katie’s care was self-evident and contagious.&lt;/p&gt;
+&lt;p&gt;This was in contrast to an increasingly platitudinous atmosphere. The same recycled stories, making the same high-level points. And I generally agree with the points! But where the details haven’t been completely glossed over, sometimes the speaker got them wrong.&lt;/p&gt;
+&lt;p&gt;I’m by no means innocent on this count. During a panel, I recited a story I’ve told many times before. But Dan’s piece has been rattling around in my head as I think about how to approach writing in public for the first time in years.&lt;/p&gt;
+&lt;p&gt;Caring requires more than saying the right things. It requires more than telling someone, “I care.” Care is shown.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title type="text">Saying Goodbye</title>
     <summary type="text">Some of the deaths of Direct File.</summary>
