@@ -68,7 +68,7 @@ There were many moments in the course of the following year that I wished we had
 
 I've been continuously working in government, one way or another, since 2015. A few weeks ago, I resigned, as did the vast majority of the Direct File team. This time, it was even harder to say goodbye.
 
-I do mourn the fact that Direct File won't be available to taxpayers next year. But as I told the team as the end closed in, "We took a pipedream, and made it a policy choice." No one can claim with a straight face that Direct File is impossible anymore; bringing it back requires only that our elected leaders make a different choice.
+I do mourn the fact that Direct File won't be available to taxpayers next year. But as I told the team as the end closed in, "We took a pipedream and made it a policy choice." No one can claim with a straight face that Direct File is impossible anymore; bringing it back requires only that our elected leaders make a different choice.
 
 What I mourn the most, though, is the dissolution of the team, the disregard for the vast impact they were poised and eager to deliver. The team itself is what I am proudest of from my time working on Direct File. Their manic dedication to the mission. The care they consistently took to get it right. The trust and love they had for each other.
 
