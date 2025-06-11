@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>The 2025 Direct File Report</title>
+		<title>Direct File is Open Source!</title>
 		<meta name="description" content="Personal blog of Chris Given, government technologist. These words are always written by a human; I have no one to blame but myself.">
 
 		<link rel="alternate" href="/feeds/feed.xml" type="application/atom+xml" title="Chris Given">
@@ -427,23 +427,24 @@ header {
 		</header>
 
 		<main id="skip">
-			<h1 id="the-2025-direct-file-report">The 2025 Direct File Report</h1>
+			<h1 id="direct-file-is-open-source">Direct File is Open Source!</h1>
 <div class="meta">
-	<time datetime="2025-06-06">Friday, June 6, 2025</time>
+	<time datetime="2025-06-11">Wednesday, June 11, 2025</time>
 </div>
 
-<p>Nina Olson and Gabriel Zucker:</p>
+<p>Alex Mark:</p>
 <blockquote>
-<p>…the team continued to evaluate Direct File, as it had all along, preparing a comprehensive year-two report on its work. We filed a Freedom of Information Act request for that evaluation, and this week received Direct File’s 2025 season-end filing report. It tells an inspiring story of a product genuinely transforming tax administration in America, a story made bittersweet only by the fact that such progress has been cut short.</p>
+<p>The tax code contains some pretty crazy edge cases that required a good amount of effort to build and test. Two of my favorite tax rules are the different ways to calculate whether the taxpayer was 65 or older during the tax year — people over 65 receive a greater standard deduction, but they also phase out of eligibility for EITC if they don’t have qualifying children. Confusingly, these rules use different definitions of what it means to be 65 during the tax year[…]</p>
+<p>I wish that these edge cases were rare — but they’re all over the tax code (<a href="https://github.com/IRS-Public/direct-file/blob/main/direct-file/backend/src/main/resources/tax/dependentsRelationship.xml#L986-L990">children who are not children</a>, <a href="https://github.com/IRS-Public/direct-file/blob/main/direct-file/backend/src/main/resources/tax/familyAndHousehold.xml#L2098-L2118">married couples filing jointly who don’t meet the Joint Return Test</a>, <a href="https://github.com/IRS-Public/direct-file/blob/main/direct-file/backend/src/main/resources/tax/familyAndHousehold.xml#L2532-L2547">people who can be claimed as a dependent who aren’t</a>, etc.). I feel confident that we represented these cases and gave the taxpayer every possible shot to file an accurate, beneficial return.</p>
 </blockquote>
-<p>In addition to their <a href="https://taxpayer-rights.org/2025-direct-file-report/">summary</a>, the Center for Taxpayer Rights has posted the <a href="https://taxpayer-rights.org/wp-content/uploads/2025/06/2025-14762.pdf">full report</a> for all to read.</p>
+<p>When Alex joined USDS in 2023, I knew only one thing about him, which was that he volunteered in the <a href="https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers">VITA</a> program. I immediately wanted to get him on Direct File. Here he gives a guided tour of some of Direct File’s (and the tax code’s) nooks and crannies, and I insisted he put in a photo of him dumping a bucket of ice water on his head.</p>
 
-<p><a href="https://taxpayer-rights.org/2025-direct-file-report/"><code>https://taxpayer-rights.org/2025-direct-file-report/</code></a></p>
+<p><a href="https://alexthemark.substack.com/p/direct-file-is-open-source"><code>https://alexthemark.substack.com/p/direct-file-is-open-source</code></a></p>
 
 
 		</main>
 
-		<!-- This page `/2025/06/the-2025-direct-file-report/` was built on 2025-06-11T20:39:04.002Z -->
+		<!-- This page `/2025/06/direct-file-is-open-source/` was built on 2025-06-11T20:39:04.002Z -->
 		<script type="module" src="/dist/KEzg0QUzmD.js"></script>
 	</body>
 </html>

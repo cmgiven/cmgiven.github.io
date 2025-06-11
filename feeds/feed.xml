@@ -4,10 +4,29 @@
   <subtitle type="text">All posts</subtitle>
   <link rel="alternate" type="text/html" href="https://chrisgiven.com/" />
   <link rel="self" type="application/atom+xml" href="https://chrisgiven.com/feeds/feed.xml" />
-  <updated>2025-06-06T00:00:00Z</updated>
+  <updated>2025-06-11T00:00:00Z</updated>
   <id>https://chrisgiven.com/feeds/feed.xml</id>
   
 
+  <entry>
+    <title type="text">Direct File is Open Source!</title>
+    <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/06/direct-file-is-open-source/" />
+    <link rel="related" type="text/html" href="https://alexthemark.substack.com/p/direct-file-is-open-source" />
+    <published>2025-06-11T00:00:00Z</published>
+    <updated>2025-06-11T00:00:00Z</updated>
+    <id>https://chrisgiven.com/2025/06/direct-file-is-open-source/</id>
+    <author>
+      <name>Chris Given</name>
+      <uri>https://chrisgiven.com/about/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Alex Mark:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The tax code contains some pretty crazy edge cases that required a good amount of effort to build and test. Two of my favorite tax rules are the different ways to calculate whether the taxpayer was 65 or older during the tax year — people over 65 receive a greater standard deduction, but they also phase out of eligibility for EITC if they don’t have qualifying children. Confusingly, these rules use different definitions of what it means to be 65 during the tax year[…]&lt;/p&gt;
+&lt;p&gt;I wish that these edge cases were rare — but they’re all over the tax code (&lt;a href=&quot;https://github.com/IRS-Public/direct-file/blob/main/direct-file/backend/src/main/resources/tax/dependentsRelationship.xml#L986-L990&quot;&gt;children who are not children&lt;/a&gt;, &lt;a href=&quot;https://github.com/IRS-Public/direct-file/blob/main/direct-file/backend/src/main/resources/tax/familyAndHousehold.xml#L2098-L2118&quot;&gt;married couples filing jointly who don’t meet the Joint Return Test&lt;/a&gt;, &lt;a href=&quot;https://github.com/IRS-Public/direct-file/blob/main/direct-file/backend/src/main/resources/tax/familyAndHousehold.xml#L2532-L2547&quot;&gt;people who can be claimed as a dependent who aren’t&lt;/a&gt;, etc.). I feel confident that we represented these cases and gave the taxpayer every possible shot to file an accurate, beneficial return.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;When Alex joined USDS in 2023, I knew only one thing about him, which was that he volunteered in the &lt;a href=&quot;https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers&quot;&gt;VITA&lt;/a&gt; program. I immediately wanted to get him on Direct File. Here he gives a guided tour of some of Direct File’s (and the tax code’s) nooks and crannies, and I insisted he put in a photo of him dumping a bucket of ice water on his head.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title type="text">The 2025 Direct File Report</title>
     <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/06/the-2025-direct-file-report/" />
