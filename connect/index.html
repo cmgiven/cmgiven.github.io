@@ -296,6 +296,7 @@ table th {
 pre,
 code {
 	font-family: var(--font-family-monospace);
+	font-size: .8125rem !important;
 }
 pre:not([class*="language-"]) {
 	margin: .5em 0;
@@ -403,6 +404,153 @@ header {
 
 .footnote-item {
 	margin: 0.75rem 0;
+}
+:root {
+    --base00: #2d2d2d;
+    --base01: #393939;
+    --base02: #515151;
+    --base03: #747369;
+    --base04: #a09f93;
+    --base05: #d3d0c8;
+    --base06: #e8e6df;
+    --base07: #f2f0ec;
+    --base08: #f2777a;
+    --base09: #f99157;
+    --base0A: #ffcc66;
+    --base0B: #99cc99;
+    --base0C: #66cccc;
+    --base0D: #6699cc;
+    --base0E: #cc99cc;
+    --base0F: #d27b53;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: var(--base05);
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: var(--base01);
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: var(--base03);
+}
+
+.token.punctuation {
+	color: var(--base05);
+}
+
+.token.tag {
+    color: var(--base08);
+}
+
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: var(--base09);
+}
+
+.token.function-name {
+	color: var(--base0D);
+}
+
+.token.boolean,
+.token.number {
+	color: var(--base09);
+}
+
+.token.function {
+	color: var(--base0D);
+}
+
+.token.property,
+.token.class-name {
+	color: var(--base07);
+}
+
+.token.constant,
+.token.symbol {
+	color: var(--base09);
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+    color: var(--base0E);
+}
+
+.token.string,
+.token.char {
+	color: var(--base0B);
+}
+
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: var(--base0C);
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: var(--base0E);
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
 }</style>
 	</head>
 	
@@ -448,7 +596,7 @@ header {
 
 		</main>
 
-		<!-- This page `/connect/` was built on 2025-06-11T20:39:04.002Z -->
+		<!-- This page `/connect/` was built on 2025-06-13T13:57:10.161Z -->
 		<script type="module" src="/dist/KEzg0QUzmD.js"></script>
 	</body>
 </html>

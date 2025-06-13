@@ -296,6 +296,7 @@ table th {
 pre,
 code {
 	font-family: var(--font-family-monospace);
+	font-size: .8125rem !important;
 }
 pre:not([class*="language-"]) {
 	margin: .5em 0;
@@ -403,6 +404,153 @@ header {
 
 .footnote-item {
 	margin: 0.75rem 0;
+}
+:root {
+    --base00: #2d2d2d;
+    --base01: #393939;
+    --base02: #515151;
+    --base03: #747369;
+    --base04: #a09f93;
+    --base05: #d3d0c8;
+    --base06: #e8e6df;
+    --base07: #f2f0ec;
+    --base08: #f2777a;
+    --base09: #f99157;
+    --base0A: #ffcc66;
+    --base0B: #99cc99;
+    --base0C: #66cccc;
+    --base0D: #6699cc;
+    --base0E: #cc99cc;
+    --base0F: #d27b53;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: var(--base05);
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: var(--base01);
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: var(--base03);
+}
+
+.token.punctuation {
+	color: var(--base05);
+}
+
+.token.tag {
+    color: var(--base08);
+}
+
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: var(--base09);
+}
+
+.token.function-name {
+	color: var(--base0D);
+}
+
+.token.boolean,
+.token.number {
+	color: var(--base09);
+}
+
+.token.function {
+	color: var(--base0D);
+}
+
+.token.property,
+.token.class-name {
+	color: var(--base07);
+}
+
+.token.constant,
+.token.symbol {
+	color: var(--base09);
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+    color: var(--base0E);
+}
+
+.token.string,
+.token.char {
+	color: var(--base0B);
+}
+
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: var(--base0C);
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: var(--base0E);
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
 }</style>
 	</head>
 	
@@ -432,6 +580,285 @@ header {
 
 
 
+	
+	
+	
+
+	
+		<div class="postsgroup">
+		<h2 id="sittin-on-the-docket-at-va"><a href="/2025/06/sittin-on-the-docket-at-va/">Sittin’ On the Docket At VA</a></h2>
+		<div class="meta">
+			<time datetime="2025-06-13">Friday, June 13, 2025</time>
+		</div>
+		<p>And now for something completely different.</p>
+<p>This is a blog post about designing algorithms for government. “Algorithm,” in this context, just means “an automated way of making a decision.” I am going to describe, in great detail, a specific algorithm that I created for the U.S. Department of Veterans Affairs (VA). If you’re a U.S. Veteran who had an active case with the Board of Veterans Appeals (the Board) at any time since November 2018, this algorithm affected your appeal.</p>
+<p>This post is going to get wonky. And it’s very long. I’m going to try my best to <a href="https://en.wikipedia.org/wiki/Inverted_pyramid_(journalism)">inverted pyramid</a> this thing. It’s entirely okay to stop reading when you’ve had enough. There isn’t a twist at the end. There isn’t a reward for having finished it. The only reward is more detail. There is no bottom.</p>
+<p>I’m sorry.</p>
+<h3 id="why-does-any-of-this-matter">Why does any of this matter?</h3>
+<p>I hope to illustrate three things.</p>
+<p>First, this is a story about <strong>automation</strong>. In this story, I automate a manual, bureaucratic process, from start to finish. But no one was fired, and in fact, the people who used to own the process were thrilled to be able to focus on more important work. To quote <a href="https://pault.ag">Paul Tagliamonte</a>, “Let machines do what machines are good at, let humans do what humans are good at.” Everyone on all sides of this automation story was committed to doing right by Veterans. I sought to approach the task with the same level of care as its former stewards had done for many years, and I leveraged insights from the manual steps they had worked out through trial and error.</p>
+<p>Automating this process involved more than just translating legal rules into instructions for a machine. The manual process involved bounded but significant discretion to ensure that the appeals continued to move apace. As we’ll see, a statutory change created even more opportunities for discretion. Machines don’t do discretion (or at least, <a href="https://simonwillison.net/2025/Feb/3/a-computer-can-never-be-held-accountable/">they shouldn’t</a>). So in concretizing the process into an algorithm, that discretion falls to the algorithm’s designer. Automation is thus a kind of rulemaking, but without established methods of public participation like notice-and-comment. And even while the decision space was sufficiently constrained to preclude bias on the basis of protected factors, I still needed to grapple with fundamental questions of fairness and ensure that humans remained in the driver’s seat.</p>
+<p>Second, this is a story about <strong>complexity</strong>. You hear about civil servants studiously attending to their small niche of bureaucratic arcana, and this is a guided tour of one such niche. It’s not my niche; I was just a visitor. If, a couple thousand words into this post, the fleeting thought “maybe this whole process should just be simpler” crosses your mind, I understand. And maybe it should be! Sometimes complexity is a once good idea that’s gone rotten with time. Sometimes it was always a bad idea. But I guarantee there was intention behind the complexity. It’s trying to help someone who was left behind. It’s there because a court ordered that it must be, or because Congress passed a law. And sometimes, it might actually be load-bearing complexity. Take a sledgehammer to it at your own risk.</p>
+<p>I think we should strive to “make it simpler” more often. Certainly I feel that Congress and the courts rarely give the challenges of implementing their will due consideration, nor do they always consider how things like administrative burden can adversely affect outcomes. But from the standpoint of most government workers, you have no choice but to make complexity work every single day. This is a story about how to make it work.</p>
+<p>Finally, this is a story about <strong>transparency</strong>. The system that we are going to be looking at was developed in the open. Anyone in the world could check out its source code or read discussions the team had while designing and building it. This system manages every Veteran’s appeal, and instead of asking them to trust us, we’re showing our work. Because the U.S. government built it, it’s in the public domain, and you can <a href="https://github.com/department-of-veterans-affairs/caseflow">find it on GitHub</a>.</p>
+<p>Except that’s a dead link. It’s dead because VA decided to take a project that had successfully operated with complete transparency for more than three years and hide it from the public. I don’t know why they decided to do that; I was long gone. I have no reason to believe there were any nefarious motivations, apart from a desire of certain officials to steer the project in a very different direction than that which my team believed in (a direction that, as the subsequent years have made clear, has not worked out).</p>
+<p>So I’m going to have to describe the algorithm as it existed when I left VA in May 2019. I can tell from the Board’s public reports that, at a minimum, the parameters of the algorithm are set to different values than when I left (which is great; that’s why I put them there). Maybe the algorithm itself has been completely replaced (that would be cool; I don’t have a monopoly on how to solve the problem, and maybe I got something wrong!).</p>
+<p>What’s not cool is that the public has no way of knowing, that Veterans have no way of knowing. For all I know, the algorithm has been replaced by an octopus (<a href="https://en.wikipedia.org/wiki/Paul_the_Octopus">literal</a> or <a href="https://aclanthology.org/2020.acl-main.463.pdf">figurative</a>).</p>
+<p>It is just a tiny component of a tiny system in a tiny part of VA, which is just one part of the U.S. federal government. But all across government, more and more decisions are being automated every day. For all the attention paid to the introduction of automation into decisions of enormous consequence rife with potential for discrimination (rightly so!), there are a host of smaller decisions that nevertheless matter to someone. How we approach the task of automating these decisions matters. The <a href="https://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=1166&amp;context=law_lawreview">guardrails</a> we put around it matter. Whether anyone even understands how the decision was made matters.</p>
+<p>If you make it to the end of this post (and again, it’s really, really okay if you don’t), you will be able to explain every decision this particular algorithm will ever make. Why shouldn’t every government algorithm be knowable in this way? No, you couldn’t possibly invest the time to understand each and every algorithm that affects your life (are you absolutely sure you want to invest it here?), but wouldn’t it be reassuring to know that you theoretically could? (And, satisfied in the knowledge that you <em>could</em> have read this post to the end, wouldn’t it be so much better to go to your local library and pick up a nice Agatha Christie?)</p>
+<h3 id="what-it-do">What it do?</h3>
+<p>When a Veteran appeals a decision made by VA, such as a denial of a claim for disability benefits, they enter a sometimes years-long, labyrinthine process. Eventually, their case will reach the Board, a group of more than 130 Veterans Law Judges and their teams of attorneys, who decide the appeal.</p>
+<p>At time of writing, there are more than 200,000 appeals waiting for a decision from the Board.<sup class="footnote-ref"><a href="#fn-sittin-on-the-docket-at-va-1" id="fnref-sittin-on-the-docket-at-va-1">[1]</a></sup> These appeals wait on a “docket,” which is lawyer speak meaning they wait in a line. Per the regulations, “Except as otherwise provided, each appeal will be decided in the order in which it is entered on the docket to which it is assigned.”<sup class="footnote-ref"><a href="#fn-sittin-on-the-docket-at-va-2" id="fnref-sittin-on-the-docket-at-va-2">[2]</a></sup></p>
+<p>When a judge is ready to decide another appeal, they need to retrieve the first case on the docket, the next case in line. The algorithm we’re discussing determines what case to give the judge. It’s called the Automatic Case Distribution algorithm.</p>
+<p>That’s it. Really. “What’s the next case in line?” is all we’re doing here.</p>
+<p>Of course, as you scroll through this 6,400 word blog post, you can probably guess that it’s going to get a lot more complicated than your average deli counter. The manual process was run by a team of four people (with other responsibilities too), armed with lots and lots of Excel spreadsheets.</p>
+<p>Then Congress passed the <a href="https://www.congress.gov/bill/115th-congress/house-bill/2288">Veterans Appeals Improvement and Modernization Act of 2017</a>. Now the Board would have not one, but four dockets. Any chance that four humans could keep track of it all went out the window. Now automation wasn’t optional, it was essential. But before tackling all of <em>that</em> complexity, I started by automating just the one docket. So let’s start there too.</p>
+<h3 id="easy-mode-a-single-docket">Easy mode: a single docket</h3>
+<p>When an appeal arrives at the Board, it is assigned a sequential docket number that starts with the date.<sup class="footnote-ref"><a href="#fn-sittin-on-the-docket-at-va-3" id="fnref-sittin-on-the-docket-at-va-3">[3]</a></sup> If we just sort the appeals by that number (and thus, implicitly, by the date they arrived), we’ll get a list of appeals in docket order.</p>
+<p>Judges request appeals in batches, which they’ll divvy up among their team of attorneys, who will review the available evidence and write decisions for the judge to review and sign.</p>
+<p>In order to supply a judge with a fresh batch of cases, the team managing the docket would run a report in the legacy Veterans Appeals Control and Locator System (VACOLS) to retrieve a spreadsheet of the oldest cases ready to be decided. Working in docket order, they would move the requested number of cases to the judge in VACOLS and email the judge a list of those cases for tracking. (Before the case files were digitized, the paper case file would also need to be sent to the judge’s office.)</p>
+<p>It’s pretty easy to imagine what this process looked like once automated. The judge would log into Caseflow, the system we were building to replace VACOLS. Assuming they had already assigned all of their pending cases to attorneys, they would be presented with a button to request a new batch of appeals. Click that and new cases would appear, ready to be assigned.</p>
+<p>One downside of the automated approach relative to the manual process was that I designed it to always assign each judge a set number of cases, three cases for each active attorney on the judge’s team. This parameter, cases per attorney, was configurable by the Board, but not by individual judges. Back when the humans were running things, judges were able to request whatever number of cases they wanted. But in user research with judges, we didn’t hear that anyone really needed to customize the number of cases, a finding that was confirmed after we launched and didn’t get any pushback. Using a fixed number of cases, called the <strong>batch size</strong>, kept things more predictable.</p>
+<p>There are two complications we have to care about. First, some cases are prioritized. A case can be prioritized because it is Advanced on the Docket (AOD), a status granted to cases where the Veteran is facing a financial or other hardship, a serious illness, or is 75 years or older. A case can also be prioritized because the Board’s decision was appealed to the Court of Appeals for Veterans Claims (CAVC) and it was remanded back to the board to correct a problem. If the case is prioritized, it must be worked irrespective of docket order.</p>
+<p>Second, if a judge had held a hearing with the Veteran, or if they had already issued a decision on the appeal, that appeal is tied to the judge and must be assigned to them, and no one else. If the judge retires, the Veteran would need to be offered another hearing with a different judge before the Board could decide the case.</p>
+<p>For these reasons, the humans had a more difficult task than just selecting the first several rows of a spreadsheet. Prioritized cases were front of the line, but they didn’t want any single judge to become a bottleneck after getting assigned too many of the most time-sensitive cases, so the team would try to ensure that each judge got a balanced number of AOD cases, while also ensuring that no AOD case sat too long.</p>
+<p>If there were cases that were tied to a particular judge, it wouldn’t make sense to assign that judge a bunch of cases that could have been worked by anybody (<strong>gen pop</strong> cases). So the team was allowed look past the strictly oldest cases on the docket to keep things moving. In order to keep this aboveboard (after all, cases are supposed to be assigned in docket order), each week the team would determine a “docket month” by calculating the age of the Nth oldest case, where N was a number that was agreed upon by the Board and stakeholders. Any case that was docketed in that month or before was considered fair game, giving the team the wiggle room they needed to keep things moving smoothly.</p>
+<p>The algorithm basically replicates this approach, with some machine-like flair. The concept of docket month, an easy-to-use tool for humans to keep track of which cases they could assign, is an unnecessary abstraction for a computer. I replaced it with a concept called <strong>docket margin</strong>. Even though judges request cases on their own schedules, the algorithm starts by asking, “What if every single judge requested a new batch of cases at the same time? How many cases would I distribute?” That count is our docket margin, a rough estimate of the concurrent bandwidth of the Board.</p>
+<p>To determine how many prioritized cases to give to each judge, we count the number of prioritized cases and divide it by the docket margin to arrive at the <strong>priority target</strong>. Multiplying the batch size by this proportion and always rounding up, we arrive at the target number of prioritized appeals we want to distribute to the judge.</p>
+<p>Here’s some Ruby code. The code is just another way of saying the same thing as the above paragraph, so if don’t like to read code, you’re not missing anything.</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">priority_target</span></span>
+  proportion <span class="token operator">=</span> <span class="token punctuation">[</span>legacy_priority_count<span class="token punctuation">.</span>to_f <span class="token operator">/</span> docket_margin<span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>min
+  <span class="token punctuation">(</span>proportion <span class="token operator">*</span> batch_size<span class="token punctuation">)</span><span class="token punctuation">.</span>ceil
+<span class="token keyword">end</span></code></pre>
+<p>We can also use the docket margin to derive the <strong>docket margin net of priority</strong>, which is the docket margin minus the count of prioritized cases. Like the docket month, this range determines how far back we are allowed to look on the docket and still be considered to be pulling from the front of the line. Unlike the docket month, it is calculated on demand and is more precise.</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">docket_margin_net_of_priority</span></span>
+  <span class="token punctuation">[</span>docket_margin <span class="token operator">-</span> legacy_priority_count<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>max
+<span class="token keyword">end</span></code></pre>
+<p>Now we have everything we need to distribute cases from our single docket. The algorithm has four steps.</p>
+<p>In the first step, we distribute any prioritized appeals that are tied to the judge requesting cases. As no other judge can decide them, we will distribute as many such appeals as we have ready, up to the batch size.</p>
+<p>In the second step, we distribute any non-prioritized appeals that are tied to the judge. We will again distribute an unlimited number of such appeals, but only searching within the docket margin net of priority, i.e. the cases that are considered to be at the front of the line.</p>
+<p>Note that, in terms of the ordering of the steps, we are considering first whether the appeal is tied to a specific judge before considering whether the appeal is prioritized. This is because at the micro level, it’s more important for any given judge to be working the cases that only they can work. At the macro level, between the Board’s more than 130 judges, there will always be plenty of judges available to work AOD cases quickly. Note that even in extreme circumstances, such as if every appeal was tied to a judge, the algorithm would be self-healing, because the docket margin net of priority shrinks the more prioritized cases are waiting, thus reducing the number of cases distributed in step two.</p>
+<p>In the third step, we check the priority target. It’s possible we already hit or even exceeded the target in step one, in which case we skip this step. But if we still need more prioritized cases, we’ll distribute gen pop prioritized cases until we reach the target. In order to ensure that prioritized cases continuously cycle, they are not sorted by docket date, but rather by how long they’ve been waiting for a decision, or in programmer speak, a <a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)">first-in, first-out (FIFO)</a> queue.</p>
+<p>At any point, if we have reached the limit of the batch size, we stop distributing cases. Our work is done.</p>
+<p>But assuming we still need more cases, of fourth and final step is to look to non-prioritized, gen pop appeals. We distribute those in docket order, until the we’ve reached the batch size and the judge has the cases they need.</p>
+<p>Here’s what it looks like in code:</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">legacy_distribution</span></span>
+  rem <span class="token operator">=</span> batch_size
+
+  priority_hearing_appeals <span class="token operator">=</span>
+    docket<span class="token punctuation">.</span>distribute_priority_appeals<span class="token punctuation">(</span><span class="token keyword">self</span><span class="token punctuation">,</span>
+                                       <span class="token symbol">genpop</span><span class="token operator">:</span> <span class="token string-literal"><span class="token string">"not_genpop"</span></span><span class="token punctuation">,</span>
+                                       <span class="token symbol">limit</span><span class="token operator">:</span> rem<span class="token punctuation">)</span>
+  rem <span class="token operator">-=</span> priority_hearing_appeals<span class="token punctuation">.</span>count
+
+  nonpriority_hearing_appeals <span class="token operator">=</span>
+    docket<span class="token punctuation">.</span>distribute_nonpriority_appeals<span class="token punctuation">(</span><span class="token keyword">self</span><span class="token punctuation">,</span>
+                                          <span class="token symbol">genpop</span><span class="token operator">:</span> <span class="token string-literal"><span class="token string">"not_genpop"</span></span><span class="token punctuation">,</span>
+                                          <span class="token symbol">range</span><span class="token operator">:</span> docket_margin_net_of_priority<span class="token punctuation">,</span>
+                                          <span class="token symbol">limit</span><span class="token operator">:</span> rem<span class="token punctuation">)</span>
+  rem <span class="token operator">-=</span> nonpriority_hearing_appeals<span class="token punctuation">.</span>count
+
+  <span class="token keyword">if</span> priority_hearing_appeals<span class="token punctuation">.</span>count <span class="token operator">&lt;</span> priority_target
+    priority_rem <span class="token operator">=</span>
+      <span class="token punctuation">[</span>priority_target <span class="token operator">-</span> priority_hearing_appeals<span class="token punctuation">.</span>count<span class="token punctuation">,</span> rem<span class="token punctuation">]</span><span class="token punctuation">.</span>min
+
+    priority_nonhearing_appeals <span class="token operator">=</span>
+      docket<span class="token punctuation">.</span>distribute_priority_appeals<span class="token punctuation">(</span><span class="token keyword">self</span><span class="token punctuation">,</span>
+                                         <span class="token symbol">genpop</span><span class="token operator">:</span> <span class="token string-literal"><span class="token string">"only_genpop"</span></span><span class="token punctuation">,</span>
+                                         <span class="token symbol">limit</span><span class="token operator">:</span> priority_rem<span class="token punctuation">)</span>
+    rem <span class="token operator">-=</span> priority_nonhearing_appeals<span class="token punctuation">.</span>count
+  <span class="token keyword">end</span>
+
+  nonpriority_appeals <span class="token operator">=</span>
+    docket<span class="token punctuation">.</span>distribute_nonpriority_appeals<span class="token punctuation">(</span><span class="token keyword">self</span><span class="token punctuation">,</span>
+                                          <span class="token symbol">limit</span><span class="token operator">:</span> rem<span class="token punctuation">)</span>
+
+  <span class="token punctuation">[</span>
+    <span class="token operator">*</span>priority_hearing_appeals<span class="token punctuation">,</span>
+    <span class="token operator">*</span>nonpriority_hearing_appeals<span class="token punctuation">,</span>
+    <span class="token operator">*</span>priority_nonhearing_appeals<span class="token punctuation">,</span>
+    <span class="token operator">*</span>nonpriority_appeals
+  <span class="token punctuation">]</span>
+<span class="token keyword">end</span></code></pre>
+<p>Congratulations, that’s one full government algorithm. It was turned on in production in November 2018, but it would only <em>stay</em> on for three months…</p>
+<h3 id="the-appeals-modernization-act">The Appeals Modernization Act</h3>
+<p>On August 23, 2017, the Veterans Appeals Improvement and Modernization Act of 2017, a.k.a the Appeals Modernization Act (AMA), was enacted into law. The first significant reform of the VA appeals process in decades, VA was given 540 days to implement the new law. There’s no possible way this already overstuffed post can accommodate my opinions about AMA and how it was implemented, so let’s just narrowly focus on what this new law meant for the Automatic Case Distribution algorithm.</p>
+<p>My team was working to replace VACOLS—a legacy system, built in <a href="https://en.wikipedia.org/wiki/PowerBuilder">PowerBuilder</a>, that had been maintained for decades by a <a href="https://logicmag.io/care/jed-wagner-on-being-the-sole-maintainer-of-the-veterans-appeals-system/">single person</a>—with Caseflow. The passage of AMA was a clarifying moment for our team. It was quickly apparent that there was no path for VACOLS to be retrofitted for the new law, so the 540-day clock provided a deadline for Caseflow to be able to stand on its own two legs.</p>
+<p>545 days later, VA was ready and the law went into effect. Nothing changed for Caseflow. Every single piece of new functionality had already gone live in production and been used to manage the real appeals of real Veterans via the Board Early Applicability of Appeals Modernization (BEAAM) program,<sup class="footnote-ref"><a href="#fn-sittin-on-the-docket-at-va-4" id="fnref-sittin-on-the-docket-at-va-4">[4]</a></sup> which invited a small group of 35 Veterans to conduct a trial run of AMA. The program not only helped to ensure a smooth rollout of the technology, but it also gave us valuable insights as we prepared updated regulations and procedures for the new law and designed informational material for Veterans and their representatives.</p>
+<p>By the way, I think this is the Platonic ideal of government IT launches. You just throw a nice party for the team because everything has already shipped.</p>
+<figure>
+<picture><source type="image/avif" srcset="/img/EANflLgwSP-1024.avif 1024w"><source type="image/webp" srcset="/img/EANflLgwSP-1024.webp 1024w"><img loading="lazy" decoding="async" src="/img/EANflLgwSP-1024.jpeg" alt="A man stands next to a banner reading 'grand opening' holding a pair of oversized scissors. The scissors are approximately 30 inches (75 centimeters) long. The man wears glasses and a leather jacket, and is of east Asian descent. Another man stands in the background, holding one end of the banner. They are in a windowless room with bare white walls, presumably a nondescript government office building." width="1024" height="728"></picture>
+<figcaption>Photo: And you buy jumbo scissors, February 19, 2019.</figcaption>
+</figure>
+<p>Everything had gone live, that is, except for the new version of the Automatic Case Distribution algorithm. The whole reason we implemented the single-docket algorithm described above, despite only needing it for three more months, was so that we could roll out as much as possible ahead of the applicability date of the law. But on AMA day, we had to flip a feature flag and swap in a completely different algorithm.</p>
+<p>In order to test the new algorithm ahead of time, I built a <a href="https://en.wikipedia.org/wiki/Discrete-event_simulation">discrete-event simulation (DES)</a> to model what the Board would look like under AMA, and I used that to pressure test the algorithm under various conditions. I had done the same for the single-docket version before rolling it out too, although that was easier thanks to decades of historical data. For example, when I said above that docket margin net of priority was “more precise” than docket month, the evidence for that claim before we took the algorithm live was simulation results showing that it never had to look more than 3,000 cases deep on the docket, which was narrower than the range the humans were using at the time. I evaluated various algorithms using four measures: (1) docket efficiency, how deep the algorithm had to look on the docket to find cases; (2) distribution diversity, how balanced prioritized cases were between judges; (3) priority timeliness, how long it took to distribute a new prioritized case; and (4) priority pending, the maximum number of prioritized cases waiting at any given time.</p>
+<p>The challenge was that for AMA, I was modeling a novel and highly complex procedural framework with only limited data as to what might happen (collecting a preliminary evidence base was another goal of the BEAAM program, which featured extensive interviews with Veterans and their representatives to explore how they would approach making choices under AMA). It was extremely important to test the algorithm under extreme scenarios, not just how VA hoped they would play out.</p>
+<p>AMA says, “The Board shall maintain at least two separate dockets,”<sup class="footnote-ref"><a href="#fn-sittin-on-the-docket-at-va-5" id="fnref-sittin-on-the-docket-at-va-5">[5]</a></sup> one for appeals that requested a hearing, and one for appeals that didn’t. The Board chose to create not two, but three dockets. As required by the statute, one docket would be for appeals that requested a hearing. A second docket would be for appeals that didn’t request a hearing, but where the Veteran had added new evidence to their case that had not been reviewed by the agency that had originally made the contested decision (i.e. the Veterans Benefits Administration for disability benefit claims). A final docket, the “Direct Review” docket, would offer Veterans the guarantee of a faster decision in exchange for not requesting a hearing or adding new evidence. When a Veteran appealed a decision to the Board, they would have to choose which docket they wanted to use. And as the dockets were maintained separately, the Board could choose how to allocate resources between them, working some dockets faster than others, while still respecting docket order within any given docket.</p>
+<p>Veterans who already had an appeal could keep it under the old “legacy” rules. As a result, there would now be four separate dockets for the algorithm to consider: the hearings docket, the new evidence docket, the Direct Review docket, and the legacy docket.</p>
+<h3 id="the-board-s-policy-goals">The Board’s policy goals</h3>
+<p>The Board articulated three policy goals to inform the design of the algorithm. As is often the case, the goals are sometimes vague and contradictory. That’s what makes this fun, I guess.</p>
+<p>The first goal was not vague. Appeals on the Direct Review docket should be decided within one year, 365 days. I understood at the time that this was not realistic in the medium term,<sup class="footnote-ref"><a href="#fn-sittin-on-the-docket-at-va-6" id="fnref-sittin-on-the-docket-at-va-6">[6]</a></sup> but the Board was unwilling to acknowledge that fact. As of December 2024, appeals on the Direct Review docket take an average of 722 days to complete, down from a peak of 1,049 days in July 2024.<sup class="footnote-ref"><a href="#fn-sittin-on-the-docket-at-va-7" id="fnref-sittin-on-the-docket-at-va-7">[7]</a></sup> Absent any staffing reductions, it is possible that the Board will be able to reach a steady state where it consistently achieves its goal by 2026. From the perspective of algorithm design, I sought to give the Board the best shot at achieving its goal, while also ensuring the Board didn’t shoot itself in the foot if the goal turned out to be unachievable.</p>
+<p>The second goal was that the dockets should be balanced “proportionately.” The definition of “proportionately” was left to me to interpret, but any definition was in contradiction with the other two goals. In the end, I excepted the Direct Review docket from any claim of proportionality and rearticulated this goal as “the <em>other</em> dockets should be balanced proportionately.”</p>
+<p>The third goal was that the Board would prioritize completing legacy cases. The size of the legacy appeals backlog, then about 400,000 cases, was the primary reason I felt the first goal was not realistic. Under the legacy rules, Veterans have options to keep an appeal going almost indefinitely, so the Board will continue to work legacy appeals for literal decades. However, unless the Board clung too long to the 365-day goal for the Direct Review docket, I expected the Board could reach “functional zero” by 2025 or 2026, where only a small proportion of its resources were going toward the long tail of legacy appeals.</p>
+<p>Keeping these goals in mind, let’s take a look at the AMA algorithm. Or, you know, maybe you could take a pleasant walk in the fresh air instead?</p>
+<h3 id="hard-mode-four-dockets">Hard mode: four dockets</h3>
+<p>As before, we start by calculating the docket margin and docket margin net of priority, only now looking at prioritized cases on any of the four dockets.</p>
+<p>Setting aside the prioritized cases for a moment, we need to determine what proportion of non-prioritized cases should come from each of the dockets. Each docket has a <strong>weight</strong>, which is generally equal to the number of non-prioritized cases waiting.</p>
+<p>The legacy docket’s weight is adjusted to account for cases that we know about, because the Veteran has filed a Notice of Disagreement, but which have yet to come to the Board and be docketed, because they are waiting on a Form 9. About 40% of Notices of Disagreement end up reaching the Form 9 stage, so we add a discounted count of pre-Form 9 cases to the number of docketed cases to give us the legacy docket’s weight.</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token keyword">class</span> <span class="token class-name">LegacyDocket</span>
+  <span class="token comment"># When counting the total number of appeals on the legacy docket for purposes of docket balancing, we</span>
+  <span class="token comment"># include NOD-stage appeals at a discount reflecting the likelihood that they will advance to a Form 9.</span>
+  <span class="token constant">NOD_ADJUSTMENT</span> <span class="token operator">=</span> <span class="token number">0.4</span>
+
+  <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">weight</span></span>
+    count<span class="token punctuation">(</span><span class="token symbol">priority</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token operator">+</span> nod_count <span class="token operator">*</span> <span class="token constant">NOD_ADJUSTMENT</span>
+  <span class="token keyword">end</span>
+
+  <span class="token comment"># ...</span>
+<span class="token keyword">end</span></code></pre>
+<p>We’ve now fulfilled the Board’s second goal, and calculated a set of proportions using the size of each docket. If that was our only goal, we could stop, but in response to the other two goals, we’ll make need to make two adjustments.</p>
+<p>First, we need to fix the Direct Review docket such that cases are decided within 365 days. When a case is docketed on the Direct Review docket, Caseflow stamps it with a <strong>target decision date</strong>, 365 days after the day it was docketed. We record the target decision date for each case to enable the Board to later adjust the timeliness goal (should it prove to be infeasible), while continuing to honor the commitment that was made to Veterans when they chose the Direct Review docket. The goal is adjusted for future cases, but we continue working the cases we have within the time we promised.</p>
+<p>From the target decision date, we can derive the <strong>distribution due date</strong>, the date that we want to start looking for a judge in order to get a decision out the door by the 365 day mark. This was initially 45 days before the target decision date, but we planned to adjust this number as we got real-world data.</p>
+<p>We can count the number of cases where distribution has come due and divide by the docket margin net of priority to calculate the approximate proportion of non-prioritized cases that need to go to Direct Reviews in order to achieve the timeliness goal. Initially, no cases are due, and so this proportion would be zero. But the Board didn’t want to wait to start working Direct Review appeals, preferring to start working them early and notch the win of beating its timeliness goal (even if this wasn’t sustainable). As a result, I constructed a curve out for the Direct Review docket.</p>
+<p>We start by estimating the number of Direct Reviews that we expect to be requested in a year. If we’re still within the first year of AMA, we extrapolate from the data we have. We can divide this number by the number of non-priority decisions the Board writes in a year to calculate the <strong>pacesetting Direct Review proportion</strong>, the percentage of non-priority decision capacity that would need to go to Direct Reviews in order to keep pace with what is arriving.</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">pacesetting_direct_review_proportion</span></span>
+  <span class="token keyword">return</span> <span class="token variable">@pacesetting_direct_review_proportion</span> <span class="token keyword">if</span> <span class="token variable">@pacesetting_direct_review_proportion</span>
+
+  receipts_per_year <span class="token operator">=</span> dockets<span class="token punctuation">[</span><span class="token symbol">:direct_review</span><span class="token punctuation">]</span><span class="token punctuation">.</span>nonpriority_receipts_per_year
+
+  <span class="token variable">@pacesetting_direct_review_proportion</span> <span class="token operator">=</span> receipts_per_year<span class="token punctuation">.</span>to_f <span class="token operator">/</span> nonpriority_decisions_per_year
+<span class="token keyword">end</span></code></pre>
+<p>Our goal is to curve out to the pacesetting proportion over time. So we calculate the <strong>interpolated minimum Direct Review proportion</strong>, using the age of the oldest waiting Direct Review appeal relative to the current timeliness goal as an interpolation factor. We apply an adjustment to this proportion, initially 67%, to lower the number of cases that are being worked ahead of schedule.</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">interpolated_minimum_direct_review_proportion</span></span>
+  <span class="token keyword">return</span> <span class="token variable">@interpolated_minimum_direct_review_proportion</span> <span class="token keyword">if</span> <span class="token variable">@interpolated_minimum_direct_review_proportion</span>
+
+  interpolator <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">-</span> <span class="token punctuation">(</span>dockets<span class="token punctuation">[</span><span class="token symbol">:direct_review</span><span class="token punctuation">]</span><span class="token punctuation">.</span>time_until_due_of_oldest_appeal<span class="token punctuation">.</span>to_f <span class="token operator">/</span>
+                      dockets<span class="token punctuation">[</span><span class="token symbol">:direct_review</span><span class="token punctuation">]</span><span class="token punctuation">.</span>time_until_due_of_new_appeal<span class="token punctuation">)</span>
+
+  <span class="token variable">@interpolated_minimum_direct_review_proportion</span> <span class="token operator">=</span>
+    <span class="token punctuation">(</span>pacesetting_direct_review_proportion <span class="token operator">*</span> interpolator <span class="token operator">*</span> <span class="token constant">INTERPOLATED_DIRECT_REVIEW_PROPORTION_ADJUSTMENT</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span>clamp<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token constant">MAXIMUM_DIRECT_REVIEW_PROPORTION</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span></code></pre>
+<p>This gives us a nice curve out, as shown below. The jolt upward occurs when we catch up with the distribution due date of the docketed appeals.</p>
+<figure>
+<picture><source type="image/avif" srcset="/img/9tmTgj53hm-1024.avif 1024w"><source type="image/webp" srcset="/img/9tmTgj53hm-1024.webp 1024w"><img loading="lazy" decoding="async" src="/img/9tmTgj53hm-1024.jpeg" alt="A chart showing the simulated percentage of each distribution to a judge that went to the Direct Review over time. Each distribution is plotted as a blue circle. At first, very few cases go to Direct Reviews, but this percentage curves upward until a little less than half of all cases go to Direct Reviews. Then the distributions jolt upward, showing that about 70% of all cases are going to Direct Reviews, with individual distributions ranging between 55% and 80% Direct Reviews." width="1024" height="744"></picture>
+<figcaption>Figure: A simulation where Direct Reviews take up about 70% of the Board's capacity.</figcaption>
+</figure>
+<p>We also apply a limit to the number of cases that can go to the Direct Review docket, initially set at 80%.</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb">direct_review_proportion <span class="token operator">=</span> <span class="token punctuation">(</span>direct_review_due_count<span class="token punctuation">.</span>to_f <span class="token operator">/</span> docket_margin_net_of_priority<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span>clamp<span class="token punctuation">(</span>interpolated_minimum_direct_review_proportion<span class="token punctuation">,</span> <span class="token constant">MAXIMUM_DIRECT_REVIEW_PROPORTION</span><span class="token punctuation">)</span></code></pre>
+<p>The second adjustment that we apply to the raw proportions is that we set a floor of 10% of non-priority cases to come from the legacy docket, provided there are at least that many available. This adjustment ensures that the Board continues working the legacy appeals backlog, even as it dwindles to only a handful of cases.</p>
+<h3 id="a-brief-aside">A brief aside</h3>
+<p>An implicit assumption here is that the Board needed to be willing to admit when it was no longer able to meet the 365-day goal. The 80% limit gave me confidence that at least nothing would break. But if the percentage of Direct Reviews was continuously pegged to 80%, there would be scarce capacity to work anything other than Direct Reviews, and in particular, to work down the legacy appeals backlog.</p>
+<p>To this day, <a href="https://www.va.gov/decision-reviews/board-appeal/">VA.gov</a> reads, “If you choose Direct Review, […] the Board’s goal is to send you a decision within 365 days (1 year).” VA continued to make that promise to Veterans even as it was issuing decisions on Direct Reviews that were more than 1,000 days old.</p>
+<p>Again, because it’s hidden from the public, I don’t know how the Board has updated the algorithm’s parameters, or even if they’re still using it. But it’s quite apparent from publicly available data that whatever algorithm is in use, the Board has not been able to keep pace with the 365-day goal it continues to claim. Fortunately, it looks like things started to turn around in 2024 as the legacy backlog began to dry up, and it’s possible the Board will be able to meet its stated goal within the next couple years. If its staffing levels aren’t cut.</p>
+<h3 id="hearings-make-this-even-harder">Hearings make this even harder</h3>
+<p>Okay, one last complication. Under AMA, cases on the hearings docket get distributed to judges as soon as they are ready, generally after the hearing has occurred, been transcribed, and the evidentiary period (the time after the hearing in which the Veteran can add new evidence to their case) has expired or been waived. The Board’s term for this is “one-touch hearings,” which is in contrast to legacy hearings, which could take place months or even years before the case was decided. As a result, the number of cases that get worked on the docket is not decided when cases are distributed, but rather when we determine how many AMA hearings to hold.</p>
+<p>Fortunately, Caseflow is also responsible for scheduling hearings. Every quarter, Caseflow Hearing Schedule asks Caseflow Queue (where the algorithm lives) to tell it the number of AMA hearings it should schedule. Caseflow calculates the docket proportions, as above, and multiplies the hearings docket proportion by the number of non-prioritized decisions it plans to issue that quarter.</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">target_number_of_ama_hearings</span></span><span class="token punctuation">(</span>time_period<span class="token punctuation">)</span>
+  decisions_in_days <span class="token operator">=</span> time_period<span class="token punctuation">.</span>to_f <span class="token operator">/</span> <span class="token number">1.</span>year<span class="token punctuation">.</span>to_f <span class="token operator">*</span> nonpriority_decisions_per_year
+  <span class="token punctuation">(</span>decisions_in_days <span class="token operator">*</span> docket_proportions<span class="token punctuation">[</span><span class="token symbol">:hearing</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>round
+<span class="token keyword">end</span></code></pre>
+<p>One complication of this number is that a Veteran could withdraw their hearing request. Due to a legal technicality, however, their appeal would remain on the hearings docket. This means that Caseflow Hearing Schedule needs to look to whether the hearing request had been withdrawn. If so, it marks the case as ready for a decision; if not, it schedules a hearing.</p>
+<p>Under AMA, cases with hearings are not required to be decided by the same judge who had held the hearing, as they were under the legacy rules. However, it remains better for everyone involved if the same judge decides the case, if possible, so the algorithm continues to mostly work the same, which I termed <strong>affinity</strong>. The only difference between affinity and the old rules is that if a judge retires or takes a leave of absence, Caseflow treats the cases they heard as gen pop, available to be assigned to anyone, instead of requiring another hearing.</p>
+<h3 id="at-long-last-let-s-automatically-distribute-some-cases">At long last, let’s automatically distribute some cases</h3>
+<p>Okay, so now we know the proportion of the Board’s decisions that should be allocated to each docket. We’ve helped Caseflow Hearing Schedule hold the right number of hearings some months ago. Now a judge comes along and asks for a new batch of cases. Let’s help them out, shall we?</p>
+<p>As before, we calculate the priority target and docket margin net of priority. The only difference is that we now need to look at the number of prioritized appeals on any of the four dockets. We’ll also calculate how deep we can look on the legacy docket specifically, the <strong>legacy docket range</strong> by multiplying the docket margin net of priority by the legacy docket proportion.</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">legacy_docket_range</span></span>
+  <span class="token punctuation">(</span>docket_margin_net_of_priority <span class="token operator">*</span> docket_proportions<span class="token punctuation">[</span><span class="token symbol">:legacy</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>round
+<span class="token keyword">end</span></code></pre>
+<p>We can start distributing appeals by looking at cases that are either tied to the judge (legacy docket) or have affinity for the judge (hearings docket). And of course, prioritized cases go first.</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token comment"># Distribute priority appeals that are tied to judges (not genpop).</span>
+distribute_appeals<span class="token punctuation">(</span><span class="token symbol">:legacy</span><span class="token punctuation">,</span> <span class="token symbol">limit</span><span class="token operator">:</span> <span class="token variable">@rem</span><span class="token punctuation">,</span> <span class="token symbol">priority</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token symbol">genpop</span><span class="token operator">:</span> <span class="token string-literal"><span class="token string">"not_genpop"</span></span><span class="token punctuation">)</span>
+distribute_appeals<span class="token punctuation">(</span><span class="token symbol">:hearing</span><span class="token punctuation">,</span> <span class="token symbol">limit</span><span class="token operator">:</span> <span class="token variable">@rem</span><span class="token punctuation">,</span> <span class="token symbol">priority</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token symbol">genpop</span><span class="token operator">:</span> <span class="token string-literal"><span class="token string">"not_genpop"</span></span><span class="token punctuation">)</span>
+
+<span class="token comment"># Distribute nonpriority appeals that are tied to judges.</span>
+<span class="token comment"># Legacy docket appeals that are tied to judges are only distributed when they are within the docket range.</span>
+distribute_appeals<span class="token punctuation">(</span><span class="token symbol">:legacy</span><span class="token punctuation">,</span> <span class="token symbol">limit</span><span class="token operator">:</span> <span class="token variable">@rem</span><span class="token punctuation">,</span> <span class="token symbol">priority</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token symbol">genpop</span><span class="token operator">:</span> <span class="token string-literal"><span class="token string">"not_genpop"</span></span><span class="token punctuation">,</span> <span class="token symbol">range</span><span class="token operator">:</span> legacy_docket_range<span class="token punctuation">)</span>
+distribute_appeals<span class="token punctuation">(</span><span class="token symbol">:hearing</span><span class="token punctuation">,</span> <span class="token symbol">limit</span><span class="token operator">:</span> <span class="token variable">@rem</span><span class="token punctuation">,</span> <span class="token symbol">priority</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token symbol">genpop</span><span class="token operator">:</span> <span class="token string-literal"><span class="token string">"not_genpop"</span></span><span class="token punctuation">)</span></code></pre>
+<p>Next, we need to see if we’ve reached the priority target, and if not, distribute more prioritized cases. We’ll need to find prioritized cases irrespective of docket, looking at how long the case has been sitting rather than its docket order to ensure that prioritized cases keep moving. This is a two step process, where we ask the databases which dockets have the oldest appeals first and then distribute that many appeals second. As a result, there is a risk of a race condition where two judges could request cases at approximately the same time and the second judge would get a case that wasn’t strictly the oldest. Any case that is skipped over in this way would likely be picked up by the very next judge, so it wasn’t necessary to try to implement some form of locking (not trivial because legacy appeals are stored in VACOLS), but it was important to flag that edge case in our documentation so we weren’t hiding even a trivial deviation from our stated procedures.</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token comment"># If we haven't yet met the priority target, distribute additional priority appeals.</span>
+priority_rem <span class="token operator">=</span> <span class="token punctuation">(</span>priority_target <span class="token operator">-</span> <span class="token variable">@appeals</span><span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token symbol">:priority</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>clamp<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token variable">@rem</span><span class="token punctuation">)</span>
+oldest_priority_appeals_by_docket<span class="token punctuation">(</span>priority_rem<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">each</span> <span class="token keyword">do</span> <span class="token operator">|</span>docket<span class="token punctuation">,</span> n<span class="token operator">|</span>
+  distribute_appeals<span class="token punctuation">(</span>docket<span class="token punctuation">,</span> <span class="token symbol">limit</span><span class="token operator">:</span> n<span class="token punctuation">,</span> <span class="token symbol">priority</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span></code></pre>
+<p>Now we need to distribute the remaining non-prioritized cases. We’ll deduct the non-priority appeals that we’ve already distributed from the proportions, and then it’s time to figure out how many cases we distribute from each docket.</p>
+<p>If we were to multiply the docket proportions by the number of cases we have left in the batch size, it’s quite unlikely we would get an whole number result, and it’s rather difficult to distribute a fraction of a case. To avoid this, we’ll use a form of stochastic rounding to ensure we distribute the requested number of cases and don’t leave any docket behind.</p>
+<p>In our stochastic rounding method, we multiply the docket proportions by the number of cases remaining. We always allocate each docket any whole number of cases, but we set aside the remainders. Using these remainders as weights, we probabilistically allocate the remaining cases to dockets. While each individual batch can vary, over many distributions, the actual proportions will converge toward the target proportions, and even dockets that are wildly outnumbered will still get the right amount of attention.</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token comment"># Extends a Hash where the values represent parts of a whole.</span>
+<span class="token comment">#</span>
+<span class="token comment"># {</span>
+<span class="token comment">#   a: 0.5,</span>
+<span class="token comment">#   b: 0.25,</span>
+<span class="token comment">#   c: 0.25</span>
+<span class="token comment"># }.extend(ProportionHash)</span>
+
+<span class="token keyword">module</span> <span class="token class-name">ProportionHash</span>
+  <span class="token keyword">def</span> <span class="token method-definition"><span class="token function">stochastic_allocation</span></span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+    result <span class="token operator">=</span> transform_values <span class="token punctuation">{</span> <span class="token operator">|</span>proportion<span class="token operator">|</span> <span class="token punctuation">(</span>num <span class="token operator">*</span> proportion<span class="token punctuation">)</span><span class="token punctuation">.</span>floor <span class="token punctuation">}</span>
+    rem <span class="token operator">=</span> num <span class="token operator">-</span> result<span class="token punctuation">.</span>values<span class="token punctuation">.</span>reduce<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">:</span><span class="token operator">+</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> result <span class="token keyword">if</span> rem <span class="token operator">==</span> <span class="token number">0</span>
+
+    cumulative_probabilities <span class="token operator">=</span> inject<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token keyword">do</span> <span class="token operator">|</span>hash<span class="token punctuation">,</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> proportion<span class="token punctuation">)</span><span class="token operator">|</span>
+      probability <span class="token operator">=</span> <span class="token punctuation">(</span>num <span class="token operator">*</span> proportion<span class="token punctuation">)</span><span class="token punctuation">.</span>modulo<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> rem
+      hash<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>hash<span class="token punctuation">.</span>values<span class="token punctuation">.</span>last <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> probability
+      hash
+    <span class="token keyword">end</span>
+
+    rem<span class="token punctuation">.</span>times <span class="token keyword">do</span>
+      random <span class="token operator">=</span> rand
+      pick <span class="token operator">=</span> cumulative_probabilities<span class="token punctuation">.</span>find <span class="token punctuation">{</span> <span class="token operator">|</span>_<span class="token punctuation">,</span> cumprob<span class="token operator">|</span> cumprob <span class="token operator">></span> random <span class="token punctuation">}</span>
+      key <span class="token operator">=</span> pick <span class="token operator">?</span> pick<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">:</span> cumulative_probabilities<span class="token punctuation">.</span>keys<span class="token punctuation">.</span>last
+      result<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">end</span>
+
+    result
+  <span class="token keyword">end</span>
+
+  <span class="token comment"># ...</span>
+<span class="token keyword">end</span></code></pre>
+<p>We run this step in a loop, in case any docket runs out of available cases (quite likely with the hearings docket, where most cases have affinity for a judge). At the end of each pass, we zero out the docket proportion of any docket that has been unable to supply us with all of the cases we requested, we normalize the proportions to sum to 100%, and then we re-run the stochastic allocation method. We repeat until we’ve either provided the judge with all the cases they need, or all of our dockets run out of cases.</p>
+<pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token keyword">until</span> <span class="token variable">@rem</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">||</span> <span class="token variable">@remaining_docket_proportions</span><span class="token punctuation">.</span>all_zero<span class="token operator">?</span>
+  <span class="token variable">@remaining_docket_proportions</span>
+    <span class="token punctuation">.</span>normalize<span class="token operator">!</span>
+    <span class="token punctuation">.</span>stochastic_allocation<span class="token punctuation">(</span><span class="token variable">@rem</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token keyword">each</span> <span class="token keyword">do</span> <span class="token operator">|</span>docket<span class="token punctuation">,</span> n<span class="token operator">|</span>
+      appeals <span class="token operator">=</span> distribute_appeals<span class="token punctuation">(</span>docket<span class="token punctuation">,</span> <span class="token symbol">limit</span><span class="token operator">:</span> n<span class="token punctuation">,</span> <span class="token symbol">priority</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+      <span class="token variable">@remaining_docket_proportions</span><span class="token punctuation">[</span>docket<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">if</span> appeals<span class="token punctuation">.</span>count <span class="token operator">&lt;</span> n
+    <span class="token keyword">end</span>
+<span class="token keyword">end</span></code></pre>
+<h3 id="monitoring-and-tweaking">Monitoring and tweaking</h3>
+<p>Each time a judge requests a distribution, Caseflow records the state of the world as the algorithm saw it, enabling us to reconstruct why it made the decisions it made and to study the behavior of the algorithm in the real world. All of this data was reported on an easy-to-use dashboard so that Board staff could understand whether the algorithm was still correctly configured to meet their goals and to provide an “early warning” system for when things were clearly no longer sustainable.</p>
+<p>I took my best stab at initial values for the different parameters of the algorithm. But these things were parameterized explicitly in anticipation that they would need to change. All told, the Board could control the batch size per attorney, the Direct Review docket time goal, the Direct Review distribution due date, the maximum Direct Review proportion, the interpolated Direct Review proportion adjustment, and the minimum legacy docket proportion. The Board also had the option of overriding the recommended number of AMA hearings to schedule.</p>
+<p>Tweaking these parameters could adapt the algorithm to any situation that I could anticipate, and hopefully many that I couldn’t. It also ensured that the decisions made by the algorithm remained properly within the control of VA leadership and were not coopted by an enigmatic machine.</p>
+<h3 id="fin">Fin</h3>
+<p>Figuring all that out was maybe 10–20% of my job for four months of my life. All of the code is pretty straightforward and boring. It’s learning the whys behind the existing process, working out of what needed to change, finding ways to test it to make sure nothing went horribly wrong, getting feedback and buy-in from stakeholders, documenting and explaining it to different audiences; that’s where the real challenge was. Anyway, that’s my experience of what it looks like to actually automate bureaucracy.</p>
+<p>I did say there isn’t a reward for making it to the end. I hope you’re happy.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn-sittin-on-the-docket-at-va-1" class="footnote-item"><p><a href="https://department.va.gov/board-of-veterans-appeals/wp-content/uploads/sites/19/2025/04/2024_bva2024ar.pdf">VA Board of Veterans’ Appeals Annual Report, Fiscal Year 2024</a> <a href="#fnref-sittin-on-the-docket-at-va-1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn-sittin-on-the-docket-at-va-2" class="footnote-item"><p><a href="https://www.ecfr.gov/current/title-38/part-20#p-20.800(b)">38 CFR 20.800(b)</a> <a href="#fnref-sittin-on-the-docket-at-va-2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn-sittin-on-the-docket-at-va-3" class="footnote-item"><p>Unfortunately, the Board used a two-digit year for this date. The Board was created in 1930, so it has its own flavor of Y2K bug scheduled to hit in 2030. Generally speaking, there shouldn’t be new appeals using this docket numbering scheme after 2019, but it’s possible for a closed appeal to be reopened through a finding of clear and unmistakable error, which would result in a new docket number being assigned. The Board still has four years to decide how to fix that one, and I built error messaging to ensure no one forgets. <a href="#fnref-sittin-on-the-docket-at-va-3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn-sittin-on-the-docket-at-va-4" class="footnote-item"><p>I designed and managed the program, but I’m not responsible for the name. Technically, we used the authority under section 4 of AMA (“Programs to test assumptions relied on in development of comprehensive plan for processing of legacy appeals and supporting new appeals system”), not the provisions of section 2(x)(3) (“Early applicability”), as the name inaccurately suggests. Yes, it still grates on me. <a href="#fnref-sittin-on-the-docket-at-va-4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn-sittin-on-the-docket-at-va-5" class="footnote-item"><p><a href="https://www.law.cornell.edu/uscode/text/38/7107#a_1">38 USC §7107(a)(1)</a> <a href="#fnref-sittin-on-the-docket-at-va-5" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn-sittin-on-the-docket-at-va-6" class="footnote-item"><p>In the first year of the new law, any cases you decide are definitionally less than 365 days old. In the long term, the legacy appeals backlog has been cleared, so you have more capacity for the AMA dockets, and you can keep pace so long as the Board is adequately staffed. But in the medium term, even my most optimistic scenarios showed the Board losing the battle to keep pace with its goal unless it worked the Direct Review docket to the exclusion of the others. <a href="#fnref-sittin-on-the-docket-at-va-6" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn-sittin-on-the-docket-at-va-7" class="footnote-item"><p><a href="https://department.va.gov/board-of-veterans-appeals/decision-wait-times/more-board-personnel-address-pending-ama-appeals-wait-times/">Board of Veterans’ Appeals, “More Board personnel address pending AMA appeals and wait times.”</a> Retrieved <a href="https://archive.ph/NL6IS">June 9, 2025</a>. <a href="#fnref-sittin-on-the-docket-at-va-7" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+		</div>
+	
+
+	
 	
 	
 	
@@ -688,7 +1115,7 @@ header {
 
 		</main>
 
-		<!-- This page `/` was built on 2025-06-11T20:39:04.003Z -->
+		<!-- This page `/` was built on 2025-06-13T13:57:10.160Z -->
 		<script type="module" src="/dist/KEzg0QUzmD.js"></script>
 	</body>
 </html>
