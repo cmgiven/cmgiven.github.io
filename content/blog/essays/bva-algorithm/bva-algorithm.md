@@ -104,7 +104,7 @@ In the third step, we check the priority target. It's possible we already hit or
 
 At any point, if we have reached the limit of the batch size, we stop distributing cases. Our work is done.
 
-But assuming we still need more cases, of fourth and final step is to look to non-prioritized, gen pop appeals. We distribute those in docket order, until the we've reached the batch size and the judge has the cases they need.
+But assuming we still need more cases, our fourth and final step is to look to non-prioritized, gen pop appeals. We distribute those in docket order, until the we've reached the batch size and the judge has the cases they need.
 
 Here's what it looks like in code:
 
