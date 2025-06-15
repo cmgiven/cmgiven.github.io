@@ -730,9 +730,7 @@ pre[class*="language-"] {
 </blockquote>
 <p>At last week’s <a href="https://summit.codeforamerica.org">Code for America Summit</a>, Suzanne Chapman and Katie Aloisi spoke about how Direct File was designed to build trust. Katie spent a significant portion of her time getting into the weeds of the tax situation of a fictional multi-generational household.</p>
 <p>The audience wasn’t bored. They were <em>riveted</em>. Suzanne and Katie’s care was self-evident and contagious.</p>
-<p>This was in contrast to an increasingly platitudinous atmosphere. The same recycled stories, making the same high-level points. And I generally agree with the points! But where the details hadn’t been completely glossed over, sometimes the speaker got them wrong.</p>
-<p>I’m by no means innocent on this count. During a panel, I recited a story I’ve told many times before. But Dan’s piece has been rattling around in my head as I think about how to approach writing in public for the first time in years.</p>
-<p>Caring requires more than saying the right things. It requires more than telling someone, “I care.” Care is shown.</p>
+<p>Caring is more than saying the right things. Care is shown.</p>
 
 			</div>
 			<div class="post">
@@ -837,7 +835,7 @@ pre[class*="language-"] {
 <p>Note that, in terms of the ordering of the steps, we are considering first whether the appeal is tied to a specific judge before considering whether the appeal is prioritized. This is because at the micro level, it’s more important for any given judge to be working the cases that only they can work. At the macro level, between the Board’s more than 130 judges, there will always be plenty of judges available to work AOD cases quickly. Note that even in extreme circumstances, such as if every appeal was tied to a judge, the algorithm would be self-healing, because the docket margin net of priority shrinks the more prioritized cases are waiting, thus reducing the number of cases distributed in step two.</p>
 <p>In the third step, we check the priority target. It’s possible we already hit or even exceeded the target in step one, in which case we skip this step. But if we still need more prioritized cases, we’ll distribute gen pop prioritized cases until we reach the target. In order to ensure that prioritized cases continuously cycle, they are not sorted by docket date, but rather by how long they’ve been waiting for a decision, or in programmer speak, a <a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)">first-in, first-out (FIFO)</a> queue.</p>
 <p>At any point, if we have reached the limit of the batch size, we stop distributing cases. Our work is done.</p>
-<p>But assuming we still need more cases, of fourth and final step is to look to non-prioritized, gen pop appeals. We distribute those in docket order, until the we’ve reached the batch size and the judge has the cases they need.</p>
+<p>But assuming we still need more cases, our fourth and final step is to look to non-prioritized, gen pop appeals. We distribute those in docket order, until the we’ve reached the batch size and the judge has the cases they need.</p>
 <p>Here’s what it looks like in code:</p>
 <pre class="language-rb" tabindex="0"><code class="language-rb"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">legacy_distribution</span></span>
   rem <span class="token operator">=</span> batch_size
@@ -1061,7 +1059,7 @@ oldest_priority_appeals_by_docket<span class="token punctuation">(</span>priorit
 
 		</main>
 
-		<!-- This page `/2025/06/` was built on 2025-06-13T13:57:10.160Z -->
+		<!-- This page `/2025/06/` was built on 2025-06-15T01:26:16.635Z -->
 		<script type="module" src="/dist/KEzg0QUzmD.js"></script>
 	</body>
 </html>
