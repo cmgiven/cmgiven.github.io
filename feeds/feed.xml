@@ -9,6 +9,26 @@
   
 
   <entry>
+    <title type="text">GAO: IRS Should Strengthen Oversight of Its Identity-Proofing Program</title>
+    <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/06/gao-irs-should-strengthen-oversight-of-its-identity-proofing-program/" />
+    <link rel="related" type="text/html" href="https://www.gao.gov/assets/gao-25-107273.pdf" />
+    <published>2025-06-18T00:00:00Z</published>
+    <updated>2025-06-18T00:00:00Z</updated>
+    <id>https://chrisgiven.com/2025/06/gao-irs-should-strengthen-oversight-of-its-identity-proofing-program/</id>
+    <author>
+      <name>Chris Given</name>
+      <uri>https://chrisgiven.com/about/</uri>
+    </author>
+    <content type="html">&lt;p&gt;James R. McTigue, Jr.:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;IRS officials were unable to show us that they had independently documented measurable goals or objectives to manage the outcomes of its identity-proofing program. According to federal internal control standards, officials should define objectives clearly to enable the identification of risks and define risk tolerances. Without independently established measures and goals, IRS cannot determine whether the performance of ID.me’s solutions meets IRS needs.&lt;/p&gt;
+&lt;p&gt;Without goals or objectives set by IRS, it is also not clear which of the several measures that ID.me provides are the best matches for what IRS needs or what level of performance is appropriate for a given application. For example, ID.me’s true pass rate excludes both users who abandon the process and users identified as highly probable fraudulent. In establishing measurable goals, IRS could determine that information on such users are essential performance measures that need to be established. Furthermore, as IRS continues to expand online services that require identity proofing it will need to consider additional metrics for these services.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;At some point I’m going to write a long post about Direct File and identity. Today is not that day. But expect this report to be cited when I do.&lt;/p&gt;
+&lt;p&gt;GAO reports are pretty technical, and it’s understandable that some of the early takes I’ve seen kind of miss the mark. This is the key point: the IRS abdicated its responsibility to define what good looks like, outsourcing that responsibility to its vendor.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title type="text">Algorithm Improvement Suggestions</title>
     <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/06/algorithm-improvement-suggestions/" />
     <link rel="related" type="text/html" href="https://chatgpt.com/share/684e228c-554c-8004-92cd-cdcb0eccb3a2" />
