@@ -24,7 +24,10 @@
 		<style>/* Defaults */
 :root {
 	--font-family: "Source Sans 3", -apple-system, system-ui, sans-serif;
-	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
+		Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
+		Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
+		Courier, monospace;
 }
 
 /* Theme colors */
@@ -54,7 +57,6 @@
 		--background-color: #333;
 	}
 }
-
 
 /* Global stylesheet */
 * {
@@ -92,15 +94,28 @@ body {
 	width: 1px;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
 	margin: 1.5rem 0;
 }
 
-h1+h2, h1+h3, h2+h3, h3+h4, h4+h5, h5+h6 {
+h1 + h2,
+h1 + h3,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
 	margin-top: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	margin-top: 3rem;
 }
 
@@ -113,34 +128,50 @@ h2 {
 	font-size: 1.25rem;
 }
 
-h2 a[href], h3 a[href], h2 a[href]:hover, h3 a[href]:hover, h2 a[href]:visited, h3 a[href]:visited, h2 a[href]:active, h3 a[href]:active {
+h2 a[href],
+h3 a[href],
+h2 a[href]:hover,
+h3 a[href]:hover,
+h2 a[href]:visited,
+h3 a[href]:visited,
+h2 a[href]:active,
+h3 a[href]:active {
 	color: var(--text-color);
 	text-decoration: none;
 }
 
-h3 a[href], h3 a[href]:hover, h3 a[href]:visited, h3 a[href]:active {
+h3 a[href],
+h3 a[href]:hover,
+h3 a[href]:visited,
+h3 a[href]:active {
 	border-bottom-width: 0.5px;
 	border-bottom-style: solid;
 	border-bottom-color: var(--decoration-color);
 }
 
-h3 a[href]:hover, h3 a[href]:active {
+h3 a[href]:hover,
+h3 a[href]:active {
 	border-bottom-color: var(--highlight-color);
 }
 
-a[href].permalink, a[href].permalink:visited, a[href].permalink:hover, a[href].permalink:active {
+a[href].permalink,
+a[href].permalink:visited,
+a[href].permalink:hover,
+a[href].permalink:active {
 	color: var(--decoration-color);
 	border-bottom: none;
 	font-weight: 300;
 }
 
-a[href].permalink:hover, a[href].permalink:active {
+a[href].permalink:hover,
+a[href].permalink:active {
 	color: var(--highlight-color);
 }
 
-h1+.meta, h2+.meta {
+h1 + .meta,
+h2 + .meta {
 	margin-top: -1.5rem;
-	font-size: .875rem;
+	font-size: 0.875rem;
 	color: var(--subtle-color);
 }
 
@@ -148,12 +179,16 @@ h1+.meta, h2+.meta {
 	text-transform: uppercase;
 }
 
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 }
 
-h3, h4 {
+h3,
+h4 {
 	font-weight: 600;
 }
 
@@ -162,13 +197,15 @@ h3 {
 }
 
 h4 {
-	font-weight: 400;
-	font-size: 1rem;
+	margin-bottom: -1.5rem;
+	font-weight: 700;
+	font-size: 0.875rem;
 }
 
-h5, h6 {
+h5,
+h6 {
 	font-weight: 400;
-	font-size: .875rem;
+	font-size: 0.875rem;
 }
 
 blockquote {
@@ -186,16 +223,16 @@ sup {
 }
 
 /* Fluid images via https://www.zachleat.com/web/fluid-images/ */
-img{
-  max-width: 100%;
+img {
+	max-width: 100%;
 }
 img[width][height] {
-  height: auto;
+	height: auto;
 }
 img[src$=".svg"] {
-  width: 100%;
-  height: auto;
-  max-width: none;
+	width: 100%;
+	height: auto;
+	max-width: none;
 }
 video,
 iframe {
@@ -228,38 +265,37 @@ a[href]:active {
 	color: var(--text-color-link-active);
 }
 
-
 hr {
-    background: url('/img/flamingo.svg') no-repeat top center;
-    background-size: contain;
-    display: block;
-    height: 1.5rem;
+	background: url("/img/flamingo.svg") no-repeat top center;
+	background-size: contain;
+	display: block;
+	height: 1.5rem;
 	margin: 1.5rem 0;
-    font-size: 0;
-    border: 0;
-    position: relative;
+	font-size: 0;
+	border: 0;
+	position: relative;
 }
 
 hr:before,
 hr:after {
-    content: '';
-    display: block;
-    position: absolute;
-    background: var(--decoration-color);
-    height: 0.5px;
-    top: 0.7rem;
+	content: "";
+	display: block;
+	position: absolute;
+	background: var(--decoration-color);
+	height: 0.5px;
+	top: 0.7rem;
 }
 
 hr:before {
-    left: 0;
-    right: 50%;
-    margin-right: 1.4rem;
+	left: 0;
+	right: 50%;
+	margin-right: 1.4rem;
 }
 
 hr:after {
-    right: 0;
-    left: 50%;
-    margin-left: 1.25rem;
+	right: 0;
+	left: 50%;
+	margin-left: 1.25rem;
 }
 
 main,
@@ -273,7 +309,7 @@ main :first-child {
 .links-nextprev {
 	display: flex;
 	justify-content: space-between;
-	gap: .5em 1em;
+	gap: 0.5em 1em;
 	list-style: "";
 	border-top: 0.5px solid var(--decoration-color);
 	padding: 1em 0;
@@ -296,10 +332,10 @@ table th {
 pre,
 code {
 	font-family: var(--font-family-monospace);
-	font-size: .8125rem !important;
+	font-size: 0.8125rem !important;
 }
 pre:not([class*="language-"]) {
-	margin: .5em 0;
+	margin: 0.5em 0;
 	line-height: 1.375; /* 22px /16 */
 	-moz-tab-size: var(--syntax-tab-size);
 	-o-tab-size: var(--syntax-tab-size);
@@ -325,7 +361,7 @@ figure {
 figcaption {
 	font-style: italic;
 	font-weight: 600;
-	font-size: .875rem;
+	font-size: 0.875rem;
 	margin-top: 0;
 }
 
@@ -365,7 +401,7 @@ header {
 /* Nav */
 .nav {
 	display: flex;
-	gap: .5em 1em;
+	gap: 0.5em 1em;
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -374,7 +410,7 @@ header {
 	display: inline-block;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
-	font-size: .875rem;
+	font-size: 0.875rem;
 }
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
@@ -393,9 +429,9 @@ header {
 
 .footnotes-sep {
 	margin: 1.5rem 0;
-    height: 0.5px;
-    color: var(--decoration-color);
-    background: var(--decoration-color);
+	height: 0.5px;
+	color: var(--decoration-color);
+	background: var(--decoration-color);
 }
 
 .footnotes {
@@ -593,7 +629,7 @@ This is compatible with:
 
 		</main>
 
-		<!-- This page `/404.html` was built on 2025-07-30T17:10:09.634Z -->
+		<!-- This page `/404.html` was built on 2025-08-04T18:13:43.050Z -->
 		<script type="module" src="/dist/KEzg0QUzmD.js"></script>
 	</body>
 </html>
