@@ -9,7 +9,4 @@
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ permalink | htmlBaseUrl(metadata.url) }}</id>
   {{ content | safe }}
-  {%- if elsewhere %}
-  <p><a href="{{ link }}">Continue reading on {{ elsewhere }}&hellip;</a></p>
-  {%- endif %}
 </feed>
