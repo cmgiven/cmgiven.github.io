@@ -34,7 +34,7 @@
 			{% endif %}
 			{{ post.content | safe }}
 			{%- if post.data.elsewhere %}
-			<p><a href="{{ post.link }}">Continue reading on {{ post.data.elsewhere }}&hellip;</a></p>
+			<p><a href="{{ post.data.link }}">Continue reading on {{ post.data.elsewhere }}&hellip;</a></p>
 			{% endif %}
 			</div>
 		{%- endfor %}
