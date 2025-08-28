@@ -11,5 +11,5 @@
   {{ content | safe }}
   {%- if elsewhere %}
   <p><a href="{{ link }}">Continue reading on {{ elsewhere }}&hellip;</a></p>
-  {%- elif link %}
+  {%- endif %}
 </feed>
