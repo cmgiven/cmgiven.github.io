@@ -4,10 +4,45 @@
   <subtitle type="text">Essays</subtitle>
   <link rel="alternate" type="text/html" href="https://chrisgiven.com/" />
   <link rel="self" type="application/atom+xml" href="https://chrisgiven.com/feeds/essays.xml" />
-  <updated>2025-08-28T00:00:00Z</updated>
+  <updated>2025-10-19T00:00:00Z</updated>
   <id>https://chrisgiven.com/feeds/essays.xml</id>
   
 
+  <entry>
+    <title type="text">California</title>
+    <summary type="text">A personal update.</summary>
+    <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/10/california/" />
+    <published>2025-10-19T00:00:00Z</published>
+    <updated>2025-10-19T00:00:00Z</updated>
+    <id>https://chrisgiven.com/2025/10/california/</id>
+    <author>
+      <name>Chris Given</name>
+      <uri>https://chrisgiven.com/about/</uri>
+    </author>
+    <content type="html">&lt;p&gt;I recently accepted the position of Deputy Secretary for Technology and Innovation of the &lt;a href=&quot;https://www.govops.ca.gov&quot;&gt;California Government Operations Agency&lt;/a&gt;. I also left DC and moved to Sacramento, driving across the country in my tiny car.&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://chrisgiven.com/2025/10/california/#fn-california-1&quot; id=&quot;fnref-california-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://chrisgiven.com/img/QJiQxZH9nT-1024.avif 1024w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://chrisgiven.com/img/QJiQxZH9nT-1024.webp 1024w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://chrisgiven.com/img/QJiQxZH9nT-1024.jpeg&quot; alt=&quot;A two-lane road stretches straight to the horizon. The elevation undulates only slightly, and the landscape is mostly brush. There are wire fences to either side of the road and a power line to the left. The sky is filled by dramatic clouds; it has very recently stormed, or it is about to. In the distance, mountains are just coming into view.&quot; width=&quot;1024&quot; height=&quot;431&quot;&gt;&lt;/picture&gt;
+&lt;figcaption&gt;Photo: The southern Rockies come into view on Route 160 in Colorado.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;I’ve often given the following advice to technologists who have been bitten by the public service bug at the federal level: find an opportunity to try working for a state or local government. The federal government has incredible advantages. With massive scale comes massive impact from the smallest of things; I sometimes describe the time I wrote a single SQL query that resulted in a couple hundred Veterans’ families receiving quite substantial checks in the mail. And it’s relatively straightforward to pull together a few million dollars for a project in an environment where such amounts are referred to as “budget dust.”&lt;/p&gt;
+&lt;p&gt;On the other hand, you are often operating at a great remove from the people you serve. I recall an early dissociative experience at VA where I marveled at how the meeting I was participating in, about the business rules for tasks known as “end products” or “EPs,” the types of which were designated by three-digit codes, would have sounded like impenetrable gibberish to an ordinary observer. Bureaucracies are riddled with such abstractions that belie their tangible impact on human life. I think this is a reason there is such power in human-centered design practices, which have the side benefit of cutting through this abstraction and forcing you to confront the ramifications for the everyday experience of services.&lt;/p&gt;
+&lt;p&gt;At the state and local level, you’re simply that much closer to people. Working at the Office of Early Childhood in Connecticut, I had a modestly sized spreadsheet of every single publicly subsidized child care provider in the state. The task of knowing each and every one of them, and of building relationships with the incredibly devoted people who run them, is eminently within reach. On the other hand, it can be a herculean task to scrape together enough dollars to try out a new approach (even before the federal government’s recent cuts to critical state services like food stamps and Medicaid). At the state and especially at the local level, you just have to be that much scrappier.&lt;/p&gt;
+&lt;p&gt;California might just defy this axiom. With nearly 40 million people, and an economy that if ranked among countries would be the fourth largest in the world (a factoid frequently noted in conversations about my potential role), California is operating at a scale unlike any other state. Getting to know its government, and its approach to technology, will be an entirely new experience for me. But with federal technology now in the hands of &lt;a href=&quot;https://americabydesign.gov&quot;&gt;self-absorbed failboy fascists&lt;/a&gt;, it tickles me to find refuge advancing progress at the next closest thing.&lt;/p&gt;
+&lt;figure&gt;
+&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://chrisgiven.com/img/lAMq8KkFQF-1024.avif 1024w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://chrisgiven.com/img/lAMq8KkFQF-1024.webp 1024w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://chrisgiven.com/img/lAMq8KkFQF-1024.jpeg&quot; alt=&quot;Looking down from a place of high elevation at a road bending sharply through a mountainous terrain. The light brown soil of a relatively arid climate is prevalent, but the mountains are dotted with low brownish-green trees. In the distance, a river leads toward a valley.&quot; width=&quot;1024&quot; height=&quot;570&quot;&gt;&lt;/picture&gt;
+&lt;figcaption&gt;Photo: The Golden Chain Highway winds through the foothills of the Sierra Nevada, approaching the California Central Valley.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;hr&gt;
+&lt;p&gt;As is already evident, being back inside government will probably stunt any aspirations I may have held of becoming a more regular correspondent. But I still hope to post personal reflections from time to time. If you’re interested in knowing when I do, that’s a great reason to have an &lt;a href=&quot;https://lighthouseapp.io/blog/feed-reader-deep-dive&quot;&gt;RSS reader&lt;/a&gt;; the year is 2025, and RSS remains a bright spot in a dark Internet.&lt;/p&gt;
+&lt;hr class=&quot;footnotes-sep&quot;&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-california-1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;A red Chevy Spark, it looks approximately like Apple’s version of the &lt;a href=&quot;https://emojipedia.org/automobile#designs&quot;&gt;automobile emoji&lt;/a&gt;. 🚗 &lt;a href=&quot;https://chrisgiven.com/2025/10/california/#fnref-california-1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+  </entry>
   <entry>
     <title type="text">The Things That Cannot Be Changed</title>
     <summary type="text">Three events that made Direct File possible.</summary>
