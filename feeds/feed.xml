@@ -4,10 +4,35 @@
   <subtitle type="text">All posts</subtitle>
   <link rel="alternate" type="text/html" href="https://chrisgiven.com/" />
   <link rel="self" type="application/atom+xml" href="https://chrisgiven.com/feeds/feed.xml" />
-  <updated>2025-10-19T00:00:00Z</updated>
+  <updated>2025-11-05T00:00:00Z</updated>
   <id>https://chrisgiven.com/feeds/feed.xml</id>
   
 
+  <entry>
+    <title type="text">IRS Direct File, 2024–2025</title>
+    <link rel="alternate" type="text/html" href="https://chrisgiven.com/2025/11/irs-direct-file-2024-2025/" />
+    <published>2025-11-05T00:00:00Z</published>
+    <updated>2025-11-05T00:00:00Z</updated>
+    <id>https://chrisgiven.com/2025/11/irs-direct-file-2024-2025/</id>
+    <author>
+      <name>Chris Given</name>
+      <uri>https://chrisgiven.com/about/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Direct File went live on January 29, 2024. It went dark on November 5, 2025.&lt;/p&gt;
+&lt;figure&gt;
+&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://chrisgiven.com/img/r1svngTThw-1024.avif 1024w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://chrisgiven.com/img/r1svngTThw-1024.webp 1024w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://chrisgiven.com/img/r1svngTThw-1024.jpeg&quot; alt=&quot;Two screenshots of IRS Direct File. The screenshot on the left shows Direct File with a message to taxpayers, reproduced below. The screenshot on the right reads, &#39;Service Outage: This service is unavailable for maintenance. Thank you for your patience.&#39;&quot; width=&quot;1024&quot; height=&quot;1032&quot;&gt;&lt;/picture&gt;
+&lt;figcaption&gt;Left: Direct File as of November 4, 2025. Right: Direct File today.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;The IRS is apparently tearing up its commitment that taxpayers would be able to access their data for three years. Now taxpayers’ only options are to access a transcript online (basically a printout from the IRS mainframe) or to file &lt;a href=&quot;https://www.irs.gov/pub/irs-pdf/f4506.pdf&quot;&gt;Form 4506&lt;/a&gt; and pay the IRS $30 to recreate a paper version of their return.&lt;/p&gt;
+&lt;p&gt;So that sucks. But I do want to memorialize the message that adorned the Direct File homepage for its final two weeks, ever since filing season ended:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Thank you, taxpayers.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Together, we created a free, simple way to file taxes.&lt;/p&gt;
+&lt;p&gt;Over 500,000 of you used Direct File. Thousands of you gave us feedback. And hundreds of you joined our usability research sessions.&lt;/p&gt;
+&lt;p&gt;We couldn’t have done it without you.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+  </entry>
   <entry>
     <title type="text">California</title>
     <summary type="text">A personal update.</summary>
