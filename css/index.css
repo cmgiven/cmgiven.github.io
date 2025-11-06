@@ -361,10 +361,15 @@ header {
 	text-decoration: none;
 }
 
+@media (min-width: 35rem) {
+	.home-link .by-decorator {
+		position: absolute;
+		right: 100%;
+		padding-right: 0.25rem;
+	}
+}
+
 .home-link .by-decorator {
-	position: absolute;
-	right: 100%;
-	padding-right: 0.25rem;
 	font-weight: 400;
 	font-style: italic;
 	color: var(--subtle-color);
